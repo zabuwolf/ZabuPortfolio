@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zabuportfolio.vercel.app/sitemap.xml
+Sitemap: https://zabudev.com/sitemap.xml

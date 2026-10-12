@@ -3,18 +3,18 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://zabuportfolio.vercel.app/</loc>
+    <loc>https://zabudev.com/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://zabuportfolio.vercel.app/?lang=vi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://zabuportfolio.vercel.app/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://zabuportfolio.vercel.app/?lang=zh" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://zabuportfolio.vercel.app/?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="cs" href="https://zabuportfolio.vercel.app/?lang=cs" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zabuportfolio.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://zabudev.com/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zabudev.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://zabudev.com/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zabudev.com/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://zabudev.com/?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zabudev.com/" />
     <image:image>
-      <image:loc>https://zabuportfolio.vercel.app/assets/og.jpg</image:loc>
+      <image:loc>https://zabudev.com/assets/og.jpg</image:loc>
       <image:title>Zabu — Website Developer</image:title>
     </image:image>
   </url>

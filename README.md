@@ -72,6 +72,14 @@ Site tĩnh, không cần build. `vercel.json` đã khai báo sẵn `framework: n
 2. **Project Name: `zabuportfolio`** (bắt buộc chữ thường). Tên này cho ra miền **https://zabuportfolio.vercel.app**.
 3. Framework Preset: **Other**, để trống Build/Output → **Deploy**.
 
-Nếu project đã tạo với tên khác: **Settings → General → Project Name** đổi thành `zabuportfolio`, rồi vào **Settings → Domains** thêm `zabuportfolio.vercel.app` (đặt làm miền chính).
+Nếu project đã tạo với tên khác: **Settings → General → Project Name** đổi thành `zabuportfolio`, rồi vào **Settings → Domains** thêm `zabuportfolio.vercel.app`.
+
+### Tên miền chính: zabudev.com
+
+Toàn bộ thẻ SEO / Open Graph, `sitemap.xml`, `robots.txt` và ảnh `assets/og.jpg` đều trỏ về **https://zabudev.com**. Để site chạy đúng trên miền này:
+
+1. Vercel → **Settings → Domains** → thêm `zabudev.com` và `www.zabudev.com`, đặt `zabudev.com` làm miền chính (www redirect về apex).
+2. Ở nhà cung cấp tên miền, trỏ DNS theo hướng dẫn Vercel: bản ghi `A` cho `@` → `76.76.21.21`, bản ghi `CNAME` cho `www` → `cname.vercel-dns.com`.
+3. Sau khi SSL cấp xong, vào Facebook Sharing Debugger (developers.facebook.com/tools/debug) bấm **Scrape Again** và nộp `https://zabudev.com/sitemap.xml` trong Google Search Console.
 
 `.vercelignore` loại `assets/ava.jpg` (ảnh tham khảo, site không dùng) khỏi bản deploy công khai.
