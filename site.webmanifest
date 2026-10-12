@@ -1,0 +1,14 @@
+{
+  "name": "Zabu — Website Developer",
+  "short_name": "Zabu",
+  "description": "Portfolio kể chuyện bằng cuộn trang: kinh nghiệm, dự án tiêu biểu và liên hệ.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f3ee",
+  "theme_color": "#f6f3ee",
+  "lang": "vi",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

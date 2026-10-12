@@ -4,15 +4,101 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zabu — Website Developer</title>
-  <meta name="description" content="Zabu — Website Developer. A scroll-driven portfolio journey: experience, selected projects and contact." />
-  <meta property="og:title" content="Zabu — Website Developer" />
-  <meta property="og:description" content="Đi cùng Zabu qua hành trình: kinh nghiệm, dự án tiêu biểu và cách làm việc cùng nhau." />
+  <meta name="description" content="Zabu — Website Developer. Portfolio kể chuyện bằng cuộn trang: kinh nghiệm, dự án tiêu biểu và liên hệ." />
+  <meta name="author" content="Zabu" />
+  <meta name="keywords" content="Zabu, website developer, lập trình web, Next.js, Shopify, print-on-demand, thiết kế website, portfolio" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#f6f3ee" />
   <link rel="canonical" href="https://zabuportfolio.vercel.app/" />
-  <meta property="og:url" content="https://zabuportfolio.vercel.app/" />
+  <link rel="alternate" hreflang="vi" href="https://zabuportfolio.vercel.app/?lang=vi" />
+  <link rel="alternate" hreflang="en" href="https://zabuportfolio.vercel.app/?lang=en" />
+  <link rel="alternate" hreflang="zh" href="https://zabuportfolio.vercel.app/?lang=zh" />
+  <link rel="alternate" hreflang="fr" href="https://zabuportfolio.vercel.app/?lang=fr" />
+  <link rel="alternate" hreflang="cs" href="https://zabuportfolio.vercel.app/?lang=cs" />
+  <link rel="alternate" hreflang="x-default" href="https://zabuportfolio.vercel.app/" />
+
+  <!-- Open Graph: Facebook, Zalo, Messenger, LinkedIn, Telegram… -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Zabu Portfolio" />
+  <meta property="og:url" content="https://zabuportfolio.vercel.app/" />
+  <meta property="og:title" content="Zabu — Website Developer" />
+  <meta property="og:description" content="Portfolio kể chuyện bằng cuộn trang: kinh nghiệm, dự án tiêu biểu và liên hệ." />
+  <meta property="og:image" content="https://zabuportfolio.vercel.app/assets/og.jpg" />
+  <meta property="og:image:secure_url" content="https://zabuportfolio.vercel.app/assets/og.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Zabu — Website Developer" />
   <meta property="og:locale" content="vi_VN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zabu — Website Developer" />
+  <meta name="twitter:description" content="Portfolio kể chuyện bằng cuộn trang: kinh nghiệm, dự án tiêu biểu và liên hệ." />
+  <meta name="twitter:image" content="https://zabuportfolio.vercel.app/assets/og.jpg" />
+  <meta name="twitter:image:alt" content="Zabu — Website Developer" />
+
+  <!-- Icons -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314161f'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EZ%3C/text%3E%3Ccircle cx='48' cy='42' r='4' fill='%23ff8a5c'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Structured data cho Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://zabuportfolio.vercel.app/#person",
+        "name": "Zabu",
+        "jobTitle": "Website Developer",
+        "url": "https://zabuportfolio.vercel.app/",
+        "image": "https://zabuportfolio.vercel.app/assets/og.jpg",
+        "email": "mailto:hoangminh7894@gmail.com",
+        "sameAs": ["https://fb.com/zabuhoangminh", "https://zalo.me/0837946886"],
+        "knowsAbout": ["Next.js", "Shopify", "Print-on-demand", "Web development", "E-commerce", "Automation"],
+        "address": { "@type": "PostalAddress", "addressCountry": "VN" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zabuportfolio.vercel.app/#website",
+        "url": "https://zabuportfolio.vercel.app/",
+        "name": "Zabu Portfolio",
+        "description": "Zabu — Website Developer. Portfolio kể chuyện bằng cuộn trang: kinh nghiệm, dự án tiêu biểu và liên hệ.",
+        "inLanguage": ["vi", "en", "zh", "fr", "cs"],
+        "publisher": { "@id": "https://zabuportfolio.vercel.app/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://zabuportfolio.vercel.app/#page",
+        "url": "https://zabuportfolio.vercel.app/",
+        "name": "Zabu — Website Developer",
+        "isPartOf": { "@id": "https://zabuportfolio.vercel.app/#website" },
+        "about": { "@id": "https://zabuportfolio.vercel.app/#person" },
+        "mainEntity": { "@id": "https://zabuportfolio.vercel.app/#person" },
+        "primaryImageOfPage": "https://zabuportfolio.vercel.app/assets/og.jpg"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://zabuportfolio.vercel.app/#projects",
+        "name": "Dự án tiêu biểu",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "POD Fulfillment", "url": "https://zabuportfolio.vercel.app/#projects" },
+          { "@type": "ListItem", "position": 2, "name": "Học Môi Giới Pro", "url": "https://hocmoigioipro.com" },
+          { "@type": "ListItem", "position": 3, "name": "Thẩm Mỹ Kim Hoo", "url": "https://thammykimhoo.vn" },
+          { "@type": "ListItem", "position": 4, "name": "Vic Craft Co.", "url": "https://viccraftco.com" },
+          { "@type": "ListItem", "position": 5, "name": "BlueTech", "url": "https://bluetechvn.com" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />

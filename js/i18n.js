@@ -431,6 +431,14 @@ window.I18N = (() => {
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
     document.title = t('meta.title');
     document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.desc'));
+    // Thẻ chia sẻ (OG / Twitter) đổi theo ngôn ngữ — crawler đọc HTML tĩnh sẽ thấy bản tiếng Việt mặc định.
+    const OG_LOCALE = { vi: 'vi_VN', en: 'en_US', zh: 'zh_CN', fr: 'fr_FR', cs: 'cs_CZ' };
+    const setMeta = (sel, val) => document.querySelector(sel)?.setAttribute('content', val);
+    setMeta('meta[property="og:title"]', t('meta.title'));
+    setMeta('meta[property="og:description"]', t('meta.desc'));
+    setMeta('meta[property="og:locale"]', OG_LOCALE[lang] || 'vi_VN');
+    setMeta('meta[name="twitter:title"]', t('meta.title'));
+    setMeta('meta[name="twitter:description"]', t('meta.desc'));
     document.querySelectorAll('[data-i18n]').forEach((el) => (el.textContent = t(el.dataset.i18n)));
     document.querySelectorAll('[data-i18n-html]').forEach((el) => (el.innerHTML = t(el.dataset.i18nHtml)));
     document.querySelectorAll('[data-i18n-ph]').forEach((el) => el.setAttribute('placeholder', t(el.dataset.i18nPh)));
