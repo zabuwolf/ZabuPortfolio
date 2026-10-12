@@ -10,16 +10,15 @@ window.PORTFOLIO = {
   role: 'Website Developer',
 
   contact: {
-    email: 'hello@zabu.dev',
+    email: 'hoangminh7894@gmail.com',
     // Dán endpoint Formspree / Getform... vào đây để form gửi thật.
     // Để trống thì form sẽ mở ứng dụng email (mailto).
     formEndpoint: '',
   },
 
   socials: [
-    { label: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/' },
-    { label: 'Behance', icon: 'behance', url: 'https://www.behance.net/' },
-    { label: 'GitHub', icon: 'github', url: 'https://github.com/' },
+    { label: 'Facebook', icon: 'facebook', url: 'https://fb.com/zabuhoangminh' },
+    { label: 'Zalo', icon: 'zalo', url: 'https://zalo.me/0837946886' },
   ],
 
   // Mỗi mục là một "trạm" trên hành trình.
