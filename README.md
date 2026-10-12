@@ -62,6 +62,14 @@ Nhân vật và bối cảnh hiện được vẽ bằng SVG flat vector nên nh
 - **Nhân vật Lottie**: thay SVG trong `#walker` bằng `lottie-web`. Trong `tick()` ở `main.js`, gọi `anim.goToAndStop(phase, false)` thay cho `walker.update(...)` để animation vẫn bám theo thao tác cuộn.
 - Tối ưu ảnh: WebP/AVIF, chiều rộng tối đa 1920px, thêm `loading="lazy"` cho ảnh ngoài hero.
 
-## Deploy
+## Deploy (Vercel)
 
-Kéo thả cả thư mục lên Netlify / Vercel / GitHub Pages là chạy được.
+Site tĩnh, không cần build. `vercel.json` đã khai báo sẵn `framework: null`, không có build command và output là thư mục gốc.
+
+1. Vercel → **Add New → Project** → import repo `zabuwolf/ZabuPortfolio`.
+2. **Project Name: `zabuportfolio`** (bắt buộc chữ thường). Tên này cho ra miền **https://zabuportfolio.vercel.app**.
+3. Framework Preset: **Other**, để trống Build/Output → **Deploy**.
+
+Nếu project đã tạo với tên khác: **Settings → General → Project Name** đổi thành `zabuportfolio`, rồi vào **Settings → Domains** thêm `zabuportfolio.vercel.app` (đặt làm miền chính).
+
+`.vercelignore` loại `assets/ava.jpg` (ảnh tham khảo, site không dùng) khỏi bản deploy công khai.
