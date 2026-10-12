@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zabu — Website Developer</title>
+  <meta name="description" content="Zabu — Website Developer. A scroll-driven portfolio journey: experience, selected projects and contact." />
+  <meta property="og:title" content="Zabu — Website Developer" />
+  <meta property="og:description" content="Follow the journey: experience, selected projects and how to work together." />
+  <meta name="theme-color" content="#f6f3ee" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314161f'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EZ%3C/text%3E%3Ccircle cx='48' cy='42' r='4' fill='%23ff8a5c'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contact" data-target="contact" data-i18n="skip">Skip to contact</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="nav-inner glass">
+      <a class="logo" href="#home" data-target="home" aria-label="Zabu — home">
+        <span class="logo-mark">Z</span>
+        <span class="logo-text"><span>Zabu<span class="dot">.</span></span><small>Website Developer</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#home" data-target="home" data-i18n="nav.home">Home</a>
+        <a href="#experience" data-target="experience" data-i18n="nav.journey">Journey</a>
+        <a href="#projects" data-target="projects" data-i18n="nav.projects">Projects</a>
+        <a href="#hobbies" data-target="hobbies" data-i18n="nav.hobbies">Hobbies</a>
+        <a href="#contact" data-target="contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="nav.lang">
+          <button type="button" data-lang="vi" aria-pressed="false">VI</button>
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        </div>
+        <a class="btn btn-primary btn-sm" href="#contact" data-target="contact" data-i18n="nav.cta">Let’s talk</a>
+      </div>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  </header>
+
+  <main id="journey" class="journey">
+    <div class="track" id="track">
+
+      <!-- ============ 1. HERO — bắt đầu ngày mới ============ -->
+      <section class="panel panel-hero" id="home" aria-label="Introduction">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span> <span data-i18n="hero.eyebrow">Available for new projects</span></p>
+          <h1>
+            <span class="h1-name">Zabu</span>
+            <span class="h1-role">Website Developer</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">I design and build fast, accessible, story-driven websites — from pixel-perfect landing pages to full-stack web apps.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects" data-target="projects" data-i18n="hero.ctaProjects">View projects</a>
+            <a class="btn btn-ghost" href="#contact" data-target="contact" data-i18n="hero.ctaContact">Contact me</a>
+          </div>
+          <dl class="stats">
+            <div><dt>10+</dt><dd data-i18n="hero.stat1">years building for the web</dd></div>
+            <div><dt>40+</dt><dd data-i18n="hero.stat2">websites shipped</dd></div>
+            <div><dt>98</dt><dd data-i18n="hero.stat3">avg. Lighthouse score</dd></div>
+          </dl>
+        </div>
+
+        <svg class="scene hero-scene" viewBox="0 0 600 420" role="img" aria-label="Zabu coding at a minimalist desk by a city window">
+          <defs>
+            <pattern id="plaid-h" width="10" height="10" patternUnits="userSpaceOnUse">
+              <rect width="10" height="10" fill="#b42a2f" />
+              <rect width="10" height="4" fill="#161314" opacity=".7" />
+              <rect width="4" height="10" fill="#161314" opacity=".7" />
+              <rect x="7" width=".8" height="10" fill="#f0c4a8" opacity=".3" />
+              <rect y="7" width="10" height=".8" fill="#f0c4a8" opacity=".3" />
+            </pattern>
+            <pattern id="plaid-hd" width="10" height="10" patternUnits="userSpaceOnUse">
+              <rect width="10" height="10" fill="#8a1e23" />
+              <rect width="10" height="4" fill="#161314" opacity=".7" />
+              <rect width="4" height="10" fill="#161314" opacity=".7" />
+              <rect x="7" width=".8" height="10" fill="#f0c4a8" opacity=".3" />
+              <rect y="7" width="10" height=".8" fill="#f0c4a8" opacity=".3" />
+            </pattern>
+            <linearGradient id="g-dawn" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#bcd3f3" />
+              <stop offset=".65" stop-color="#f6dccb" />
+              <stop offset="1" stop-color="#fbe9dc" />
+            </linearGradient>
+            <radialGradient id="g-screen" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#7aa2ff" stop-opacity=".55" />
+              <stop offset="1" stop-color="#7aa2ff" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="g-lamp" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#ffd59e" stop-opacity=".55" />
+              <stop offset="1" stop-color="#ffd59e" stop-opacity="0" />
+            </radialGradient>
+            <clipPath id="clip-window"><rect x="60" y="30" width="440" height="215" rx="4" /></clipPath>
+          </defs>
+
+          <!-- window & city -->
+          <rect x="50" y="20" width="460" height="235" rx="10" fill="#fff" />
+          <g clip-path="url(#clip-window)">
+            <rect x="60" y="30" width="440" height="215" fill="url(#g-dawn)" />
+            <circle cx="410" cy="150" r="30" fill="#ffd9a8" />
+            <g class="cloud cloud-a" fill="#fff" opacity=".9"><ellipse cx="140" cy="70" rx="40" ry="11" /><ellipse cx="160" cy="62" rx="22" ry="12" /></g>
+            <g class="cloud cloud-b" fill="#fff" opacity=".8"><ellipse cx="330" cy="92" rx="34" ry="9" /><ellipse cx="346" cy="85" rx="18" ry="10" /></g>
+            <g fill="#a9bde0" opacity=".7">
+              <rect x="60" y="150" width="34" height="95" /><rect x="98" y="120" width="26" height="125" /><rect x="128" y="168" width="40" height="77" />
+              <rect x="172" y="132" width="30" height="113" /><rect x="206" y="160" width="44" height="85" /><rect x="254" y="110" width="24" height="135" />
+              <rect x="282" y="150" width="38" height="95" /><rect x="324" y="128" width="30" height="117" /><rect x="358" y="172" width="44" height="73" />
+              <rect x="406" y="140" width="28" height="105" /><rect x="438" y="118" width="34" height="127" /><rect x="476" y="160" width="30" height="85" />
+            </g>
+            <g fill="#8197c3">
+              <rect x="70" y="190" width="44" height="55" /><rect x="120" y="176" width="30" height="69" /><rect x="156" y="200" width="52" height="45" />
+              <rect x="214" y="184" width="34" height="61" /><rect x="296" y="196" width="40" height="49" /><rect x="342" y="180" width="28" height="65" />
+              <rect x="420" y="192" width="46" height="53" /><rect x="470" y="178" width="34" height="67" />
+            </g>
+          </g>
+          <g stroke="#fff" stroke-width="6"><line x1="207" y1="30" x2="207" y2="245" /><line x1="353" y1="30" x2="353" y2="245" /></g>
+          <rect x="40" y="252" width="480" height="8" rx="3" fill="#e6ddd0" />
+
+          <!-- pendant lamp -->
+          <line x1="470" y1="0" x2="470" y2="56" stroke="#3a3f4b" stroke-width="2" />
+          <path d="M448 78 Q470 46 492 78 Z" fill="#14161f" />
+          <ellipse class="lamp-glow" cx="470" cy="170" rx="80" ry="94" fill="url(#g-lamp)" />
+
+          <!-- plant -->
+          <g>
+            <path d="M566 372 C540 330 548 296 560 280 C566 312 572 340 570 372 Z" fill="#6aa57c" />
+            <path d="M570 372 C580 326 600 310 604 298 C604 330 590 356 576 374 Z" fill="#82bb92" />
+            <path d="M562 372 C534 350 524 330 522 314 C542 326 556 344 566 370 Z" fill="#5a9470" />
+            <path d="M548 372 H590 L584 420 H554 Z" fill="#e9dfd2" />
+            <rect x="546" y="368" width="46" height="8" rx="3" fill="#d8cbb8" />
+          </g>
+
+          <!-- desk -->
+          <rect x="352" y="322" width="8" height="98" fill="#b9a283" />
+          <rect x="452" y="326" width="88" height="88" rx="4" fill="#ede3d4" />
+          <line x1="452" y1="356" x2="540" y2="356" stroke="#d8cbb8" stroke-width="2" />
+          <line x1="452" y1="386" x2="540" y2="386" stroke="#d8cbb8" stroke-width="2" />
+          <rect x="486" y="339" width="20" height="4" rx="2" fill="#b9a283" />
+          <rect x="486" y="369" width="20" height="4" rx="2" fill="#b9a283" />
+          <rect x="266" y="312" width="282" height="10" rx="3" fill="#e3d3bd" />
+          <rect x="270" y="322" width="274" height="4" fill="#cdb99d" />
+
+          <!-- monitor -->
+          <ellipse class="screen-glow" cx="410" cy="236" rx="130" ry="80" fill="url(#g-screen)" />
+          <rect x="388" y="306" width="44" height="6" rx="3" fill="#2b2f3b" />
+          <rect x="404" y="272" width="12" height="36" fill="#343a48" />
+          <rect x="330" y="186" width="160" height="92" rx="6" fill="#1c2130" />
+          <rect x="337" y="193" width="146" height="78" rx="3" fill="#0f1424" />
+          <g class="code">
+            <rect x="345" y="201" width="30" height="4" rx="2" fill="#ff8a5c" /><rect x="379" y="201" width="44" height="4" rx="2" fill="#c3c8d6" />
+            <rect x="353" y="210" width="22" height="4" rx="2" fill="#7aa2ff" /><rect x="379" y="210" width="60" height="4" rx="2" fill="#9be7c4" />
+            <rect x="353" y="219" width="40" height="4" rx="2" fill="#c3c8d6" /><rect x="397" y="219" width="28" height="4" rx="2" fill="#ff8a5c" />
+            <rect x="361" y="228" width="54" height="4" rx="2" fill="#9be7c4" /><rect x="419" y="228" width="30" height="4" rx="2" fill="#7aa2ff" />
+            <rect x="361" y="237" width="34" height="4" rx="2" fill="#c3c8d6" />
+            <rect x="353" y="246" width="26" height="4" rx="2" fill="#7aa2ff" />
+            <rect class="code-typing" x="345" y="255" width="70" height="4" rx="2" fill="#c3c8d6" />
+            <rect class="cursor" x="419" y="254" width="3" height="6" fill="#fff" />
+          </g>
+          <!-- keyboard, mouse -->
+          <rect x="294" y="306" width="58" height="6" rx="2" fill="#c9ced8" />
+          <ellipse cx="368" cy="309" rx="6" ry="3" fill="#c9ced8" />
+
+          <!-- coffee -->
+          <g class="steam" fill="none" stroke="#c9c2b6" stroke-width="2" stroke-linecap="round">
+            <path class="s1" d="M504 288 q-5 -8 0 -14 q5 -6 0 -14" />
+            <path class="s2" d="M511 286 q-5 -8 0 -14 q5 -6 0 -14" />
+          </g>
+          <path d="M498 292 H520 L518 312 H500 Z" fill="#fff" stroke="#d9cfc0" stroke-width="1.5" />
+          <path d="M519 296 q9 0 8 7 q-1 6 -9 5" fill="none" stroke="#d9cfc0" stroke-width="3" />
+          <rect x="526" y="300" width="26" height="6" rx="1" fill="#5b6cff" />
+          <rect x="528" y="294" width="22" height="6" rx="1" fill="#ff8a5c" />
+          <rect x="526" y="306" width="26" height="6" rx="1" fill="#14161f" />
+
+          <!-- chair -->
+          <rect x="176" y="262" width="16" height="90" rx="8" fill="#3a3f4b" />
+          <rect x="182" y="352" width="86" height="12" rx="6" fill="#444a58" />
+          <rect x="221" y="364" width="8" height="36" fill="#2d313b" />
+          <line x1="196" y1="404" x2="256" y2="404" stroke="#2d313b" stroke-width="6" stroke-linecap="round" />
+          <circle cx="198" cy="412" r="6" fill="#1f2229" /><circle cx="254" cy="412" r="6" fill="#1f2229" /><circle cx="226" cy="413" r="6" fill="#1f2229" />
+
+          <!-- seated character (idle: typing) -->
+          <g id="seated-hero" class="seated">
+            <g class="arm-far">
+              <line x1="236" y1="272" x2="258" y2="306" stroke="#bb8159" stroke-width="11" stroke-linecap="round" /><line x1="235" y1="270" x2="248" y2="290" stroke="url(#plaid-hd)" stroke-width="16" stroke-linecap="round" />
+              <g class="type type-a" style="transform-origin:258px 306px">
+                <line x1="258" y1="306" x2="296" y2="302" stroke="#bb8159" stroke-width="10" stroke-linecap="round" />
+                <circle cx="300" cy="302" r="6" fill="#bb8159" />
+              </g>
+            </g>
+            <line x1="224" y1="346" x2="286" y2="344" stroke="#2c4a77" stroke-width="20" stroke-linecap="round" />
+            <line x1="286" y1="344" x2="292" y2="404" stroke="#2c4a77" stroke-width="17" stroke-linecap="round" />
+            <path d="M282 404 C282 401 284 400 287 400 L296 401 C302 402 309 405 313 409 L313 414 L282 414 Z" fill="#0e0e11" />
+            <rect x="204" y="338" width="58" height="18" rx="8" fill="#3a5f95" />
+            <line x1="226" y1="350" x2="290" y2="350" stroke="#3a5f95" stroke-width="22" stroke-linecap="round" />
+            <line x1="290" y1="350" x2="294" y2="404" stroke="#3a5f95" stroke-width="18" stroke-linecap="round" />
+            <path d="M284 404 C284 401 286 400 289 400 L299 401 C305 402 312 405 316 409 L316 414 L284 414 Z" fill="#141418" /><rect x="284" y="413" width="32" height="3" fill="#050506" /><path d="M292 403 q6 0 11 3" fill="none" stroke="#3a3a44" stroke-width="1" />
+            <path d="M203 360 C201 322 205 288 219 271 C228 261 247 259 256 268 C266 279 267 318 268 356 C252 363 220 364 203 360 Z" fill="url(#plaid-h)" />
+            <path d="M243 267 L247 282 L252 268 Z" fill="#d49a72" />
+            <path d="M238 267 L245 280 L244 267 Z M253 267 L248 281 L256 270 Z" fill="#7d1a1f" />
+            <path d="M250 283 C256 306 259 330 260 360" fill="none" stroke="#000" stroke-opacity=".3" stroke-width="1.2" />
+            <g class="head" transform="translate(167 198)">
+            <line x1="74" y1="64" x2="75" y2="50" stroke="#d49a72" stroke-width="13" stroke-linecap="round" />
+            <ellipse cx="77" cy="36" rx="20" ry="21" fill="#d49a72" />
+            <path d="M61 40 C61 56 73 63 84 61 C93 59 97 51 96 42 Z" fill="#d49a72" />
+            <path d="M95 35 C100 39 101 43 96 45 Z" fill="#d49a72" />
+            <path d="M64 44 C64 55 74 62 84 61 C92 60 97 54 97 48 C94 50 91 52 88 52 C84 50 80 48 74 47 C70 46 67 44 64 44 Z" fill="#2b211c" opacity=".27" />
+            <path d="M62 37 L67 37 L67 46 L63 45 Z" fill="#2b211c" opacity=".3" />
+            <path d="M88 48.6 C91 47.6 95 47.6 97 48.8" fill="none" stroke="#2b211c" stroke-width="1.8" stroke-linecap="round" opacity=".5" />
+            <path d="M58 34 C56 20 64 12 74 12 C80 12 84 14 86 17 C80 17 76 19 74 23 C72 28 70 33 70 38 C66 38 63 42 62 46 C59 44 58 40 58 34 Z" fill="#1d1916" />
+            <path d="M72 13 C78 10 86 12 89 18 C85 16 80 16 76 18 Z" fill="#1d1916" opacity=".55" />
+            <ellipse cx="66.5" cy="38.5" rx="4.5" ry="5.5" fill="#c4885f" />
+            <path d="M66 36 q2 2 0 5" fill="none" stroke="#bb8159" stroke-width="1" />
+            <path d="M83 29.4 L93.5 28.8" stroke="#1d1916" stroke-width="2.6" stroke-linecap="round" />
+            <ellipse cx="89" cy="34" rx="1.9" ry="1.5" fill="#1b1512" />
+            <path d="M86.6 32.6 q2.5 -1 5 0" fill="none" stroke="#1b1512" stroke-width="1" />
+            <path d="M90 52.2 q3 .5 5.4 -.6" fill="none" stroke="#8a4f3a" stroke-width="1.4" stroke-linecap="round" />
+          </g>
+            <g class="arm-near">
+              <line x1="244" y1="274" x2="266" y2="310" stroke="#d49a72" stroke-width="12" stroke-linecap="round" /><line x1="243" y1="272" x2="256" y2="293" stroke="url(#plaid-h)" stroke-width="17" stroke-linecap="round" />
+              <g class="type type-b" style="transform-origin:266px 310px">
+                <line x1="266" y1="310" x2="304" y2="308" stroke="#d49a72" stroke-width="11" stroke-linecap="round" />
+                <circle cx="308" cy="307" r="6.5" fill="#d49a72" />
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        <div class="door door-exit" aria-hidden="true"><span>EXIT</span></div>
+        <div class="floor floor-office" aria-hidden="true"></div>
+        <div class="scroll-hint" id="scroll-hint" aria-hidden="true"><span class="mouse"></span><span class="hint-scroll" data-i18n="hint.scroll">Scroll to start the journey</span><span class="hint-swipe" data-i18n="hint.tap">Tap › or swipe to start the journey</span></div>
+      </section>
+
+      <!-- ============ 2. EXPERIENCE — hành trình sự nghiệp ============ -->
+      <section class="panel panel-journey" id="experience" aria-labelledby="exp-title">
+        <div class="sky" aria-hidden="true"></div>
+        <div class="clouds parallax" data-speed="0.55" aria-hidden="true"></div>
+        <div class="skyline skyline-far parallax" data-speed="0.4" aria-hidden="true"></div>
+        <div class="skyline skyline-near parallax" data-speed="0.25" aria-hidden="true"></div>
+
+        <div class="section-intro journey-intro reveal">
+          <p class="kicker" data-i18n="exp.kicker">01 — The journey</p>
+          <h2 id="exp-title" data-i18n-html="exp.title">Every stop taught me <em>something new.</em></h2>
+          <p data-i18n="exp.text">Scroll to walk through the places I’ve built for — each stop is a chapter of my career.</p>
+        </div>
+        <div class="stations" id="stations"></div>
+        <div class="floor floor-street" aria-hidden="true"></div>
+      </section>
+
+      <!-- ============ 3. PROJECTS — digital gallery ============ -->
+      <section class="panel panel-gallery" id="projects" aria-labelledby="proj-title">
+        <div class="door door-gallery" aria-hidden="true"><span>GALLERY</span></div>
+        <div class="section-intro gallery-intro reveal">
+          <p class="kicker" data-i18n="proj.kicker">02 — Digital gallery</p>
+          <h2 id="proj-title" data-i18n-html="proj.title">Selected <em>work.</em></h2>
+          <p data-i18n="proj.text">Hover or tap a piece to bring it to life. Each one opens into a short case study.</p>
+        </div>
+        <div class="frames" id="frames"></div>
+        <div class="floor floor-gallery" aria-hidden="true"></div>
+      </section>
+
+      <!-- ============ 4. HOBBIES — ngoài giờ code ============ -->
+      <section class="panel panel-hobbies" id="hobbies" aria-labelledby="hob-title">
+        <div class="section-intro hobbies-intro reveal">
+          <p class="kicker" data-i18n="hob.kicker">03 — Off the clock</p>
+          <h2 id="hob-title" data-i18n-html="hob.title">Life beyond <em>the keyboard.</em></h2>
+          <p data-i18n="hob.text">Keep walking — this is what keeps me curious and recharged.</p>
+        </div>
+        <div class="hobbies" id="hobbies-list"></div>
+        <div class="floor floor-hobbies" aria-hidden="true"></div>
+      </section>
+
+      <!-- ============ 5. CONTACT — kết nối ============ -->
+      <section class="panel panel-contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-card glass-dark reveal">
+          <p class="kicker" data-i18n="contact.kicker">04 — Let’s connect</p>
+          <h2 id="contact-title" data-i18n-html="contact.title">Have a project in mind? <em>Let’s grab a coffee.</em></h2>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="field-row">
+              <label class="field"><span data-i18n="form.name">Name</span><input name="name" type="text" autocomplete="name" required placeholder="Your name" data-i18n-ph="form.namePh" /></label>
+              <label class="field"><span data-i18n="form.email">Email</span><input name="email" type="email" autocomplete="email" required placeholder="you@company.com" /></label>
+            </div>
+            <label class="field"><span data-i18n="form.message">Message</span><textarea data-i18n-ph="form.messagePh" name="message" rows="4" required placeholder="Tell me about your project, timeline and budget…"></textarea></label>
+            <div class="form-foot">
+              <button class="btn btn-primary" type="submit" data-i18n="form.send">Send message</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+          <div class="socials" id="socials"></div>
+        </div>
+
+        <div class="cafe-caption">
+          <p class="kicker" data-i18n="contact.kicker">04 — Let’s connect</p>
+          <h2><em data-i18n="contact.caption">Coffee’s on me.</em></h2>
+          <p data-i18n="contact.captionText">Tell me about your project — I reply within 24 hours.</p>
+        </div>
+
+        <svg class="scene cafe-scene" viewBox="0 0 600 420" role="img" aria-label="Zabu at a café table offering a business card">
+          <defs>
+            <pattern id="plaid-c" width="10" height="10" patternUnits="userSpaceOnUse">
+              <rect width="10" height="10" fill="#b42a2f" />
+              <rect width="10" height="4" fill="#161314" opacity=".7" />
+              <rect width="4" height="10" fill="#161314" opacity=".7" />
+              <rect x="7" width=".8" height="10" fill="#f0c4a8" opacity=".3" />
+              <rect y="7" width="10" height=".8" fill="#f0c4a8" opacity=".3" />
+            </pattern>
+            <pattern id="plaid-cd" width="10" height="10" patternUnits="userSpaceOnUse">
+              <rect width="10" height="10" fill="#8a1e23" />
+              <rect width="10" height="4" fill="#161314" opacity=".7" />
+              <rect width="4" height="10" fill="#161314" opacity=".7" />
+              <rect x="7" width=".8" height="10" fill="#f0c4a8" opacity=".3" />
+              <rect y="7" width="10" height=".8" fill="#f0c4a8" opacity=".3" />
+            </pattern>
+            <linearGradient id="g-dusk" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2e3a68" />
+              <stop offset=".6" stop-color="#b8708a" />
+              <stop offset="1" stop-color="#f3a46c" />
+            </linearGradient>
+            <radialGradient id="g-warm" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#ffcf8a" stop-opacity=".55" />
+              <stop offset="1" stop-color="#ffcf8a" stop-opacity="0" />
+            </radialGradient>
+            <clipPath id="clip-arch"><path d="M60 250 V110 Q60 40 190 40 Q320 40 320 110 V250 Z" /></clipPath>
+          </defs>
+
+          <path d="M52 256 V108 Q52 32 190 32 Q328 32 328 108 V256 Z" fill="#4a3b33" />
+          <g clip-path="url(#clip-arch)">
+            <rect x="60" y="40" width="260" height="210" fill="url(#g-dusk)" />
+            <circle cx="250" cy="200" r="26" fill="#ffd3a1" opacity=".9" />
+            <g fill="#1f2340">
+              <rect x="60" y="170" width="30" height="80" /><rect x="94" y="140" width="24" height="110" /><rect x="122" y="182" width="38" height="68" />
+              <rect x="164" y="150" width="28" height="100" /><rect x="196" y="176" width="40" height="74" /><rect x="240" y="130" width="22" height="120" />
+              <rect x="266" y="168" width="54" height="82" />
+            </g>
+            <g fill="#ffd98f" class="city-lights">
+              <rect x="100" y="152" width="4" height="4" /><rect x="108" y="170" width="4" height="4" /><rect x="170" y="164" width="4" height="4" />
+              <rect x="178" y="188" width="4" height="4" /><rect x="246" y="144" width="4" height="4" /><rect x="252" y="170" width="4" height="4" />
+              <rect x="280" y="182" width="4" height="4" /><rect x="132" y="196" width="4" height="4" /><rect x="206" y="190" width="4" height="4" />
+            </g>
+          </g>
+          <line x1="190" y1="40" x2="190" y2="250" stroke="#4a3b33" stroke-width="5" />
+          <rect x="44" y="252" width="292" height="8" rx="3" fill="#5c4a40" />
+
+          <!-- pendant lamps -->
+          <line x1="350" y1="0" x2="350" y2="70" stroke="#1b1512" stroke-width="2" />
+          <path d="M330 92 Q350 60 370 92 Z" fill="#c99b5d" />
+          <ellipse class="lamp-glow" cx="350" cy="200" rx="100" ry="110" fill="url(#g-warm)" />
+          <line x1="520" y1="0" x2="520" y2="50" stroke="#1b1512" stroke-width="2" />
+          <path d="M502 72 Q520 42 538 72 Z" fill="#c99b5d" />
+          <ellipse class="lamp-glow" cx="520" cy="170" rx="80" ry="100" fill="url(#g-warm)" />
+
+          <!-- counter & espresso machine -->
+          <rect x="446" y="140" width="154" height="8" rx="2" fill="#6b5446" />
+          <circle cx="470" cy="128" r="12" fill="#6aa57c" /><rect x="462" y="128" width="16" height="12" fill="#e9dfd2" />
+          <rect x="500" y="122" width="10" height="18" fill="#d9cfc0" /><rect x="514" y="116" width="10" height="24" fill="#ff8a5c" /><rect x="528" y="126" width="10" height="14" fill="#d9cfc0" />
+          <rect x="480" y="232" width="74" height="58" rx="6" fill="#c9ced8" />
+          <rect x="486" y="238" width="62" height="14" rx="3" fill="#9aa1b0" />
+          <rect x="498" y="256" width="8" height="14" fill="#5d6372" /><rect x="528" y="256" width="8" height="14" fill="#5d6372" />
+          <rect x="440" y="290" width="160" height="12" rx="3" fill="#8a6a55" />
+          <rect x="446" y="302" width="154" height="118" fill="#6b4f3f" />
+          <g stroke="#5a4134" stroke-width="2"><line x1="486" y1="302" x2="486" y2="420" /><line x1="526" y1="302" x2="526" y2="420" /><line x1="566" y1="302" x2="566" y2="420" /></g>
+
+          <!-- table -->
+          <rect x="312" y="322" width="7" height="90" fill="#3a2e28" />
+          <ellipse cx="315" cy="414" rx="28" ry="5" fill="#3a2e28" />
+          <rect x="262" y="314" width="108" height="9" rx="4" fill="#efe6da" />
+
+          <!-- mug on table -->
+          <g class="steam" fill="none" stroke="#d8cbb8" stroke-width="2" stroke-linecap="round" opacity=".8">
+            <path class="s1" d="M338 292 q-5 -8 0 -14 q5 -6 0 -14" />
+            <path class="s2" d="M345 290 q-5 -8 0 -14 q5 -6 0 -14" />
+          </g>
+          <path d="M332 296 H354 L352 314 H334 Z" fill="#fff" />
+          <path d="M353 300 q8 0 7 6 q-1 5 -8 4" fill="none" stroke="#fff" stroke-width="3" />
+
+          <!-- café chair -->
+          <path d="M176 262 Q186 300 192 352" fill="none" stroke="#2a201b" stroke-width="7" stroke-linecap="round" />
+          <rect x="182" y="350" width="86" height="10" rx="5" fill="#3a2e28" />
+          <line x1="192" y1="360" x2="186" y2="418" stroke="#2a201b" stroke-width="5" stroke-linecap="round" />
+          <line x1="258" y1="360" x2="264" y2="418" stroke="#2a201b" stroke-width="5" stroke-linecap="round" />
+
+          <!-- seated character offering a business card -->
+          <g id="seated-cafe" class="seated">
+            <line x1="236" y1="272" x2="258" y2="304" stroke="#bb8159" stroke-width="11" stroke-linecap="round" /><line x1="235" y1="270" x2="248" y2="289" stroke="url(#plaid-cd)" stroke-width="16" stroke-linecap="round" />
+            <line x1="258" y1="304" x2="326" y2="306" stroke="#bb8159" stroke-width="10" stroke-linecap="round" />
+            <circle cx="330" cy="304" r="6" fill="#bb8159" />
+            <line x1="224" y1="346" x2="286" y2="344" stroke="#2c4a77" stroke-width="20" stroke-linecap="round" />
+            <line x1="286" y1="344" x2="292" y2="404" stroke="#2c4a77" stroke-width="17" stroke-linecap="round" />
+            <path d="M282 404 C282 401 284 400 287 400 L296 401 C302 402 309 405 313 409 L313 414 L282 414 Z" fill="#0e0e11" />
+            <rect x="204" y="338" width="58" height="18" rx="8" fill="#3a5f95" />
+            <line x1="226" y1="350" x2="290" y2="350" stroke="#3a5f95" stroke-width="22" stroke-linecap="round" />
+            <line x1="290" y1="350" x2="294" y2="404" stroke="#3a5f95" stroke-width="18" stroke-linecap="round" />
+            <path d="M284 404 C284 401 286 400 289 400 L299 401 C305 402 312 405 316 409 L316 414 L284 414 Z" fill="#141418" /><rect x="284" y="413" width="32" height="3" fill="#050506" /><path d="M292 403 q6 0 11 3" fill="none" stroke="#3a3a44" stroke-width="1" />
+            <path d="M203 360 C201 322 205 288 219 271 C228 261 247 259 256 268 C266 279 267 318 268 356 C252 363 220 364 203 360 Z" fill="url(#plaid-c)" />
+            <path d="M243 267 L247 282 L252 268 Z" fill="#d49a72" />
+            <path d="M238 267 L245 280 L244 267 Z M253 267 L248 281 L256 270 Z" fill="#7d1a1f" />
+            <path d="M250 283 C256 306 259 330 260 360" fill="none" stroke="#000" stroke-opacity=".3" stroke-width="1.2" />
+            <g class="head" transform="translate(167 198)">
+            <line x1="74" y1="64" x2="75" y2="50" stroke="#d49a72" stroke-width="13" stroke-linecap="round" />
+            <ellipse cx="77" cy="36" rx="20" ry="21" fill="#d49a72" />
+            <path d="M61 40 C61 56 73 63 84 61 C93 59 97 51 96 42 Z" fill="#d49a72" />
+            <path d="M95 35 C100 39 101 43 96 45 Z" fill="#d49a72" />
+            <path d="M64 44 C64 55 74 62 84 61 C92 60 97 54 97 48 C94 50 91 52 88 52 C84 50 80 48 74 47 C70 46 67 44 64 44 Z" fill="#2b211c" opacity=".27" />
+            <path d="M62 37 L67 37 L67 46 L63 45 Z" fill="#2b211c" opacity=".3" />
+            <path d="M88 48.6 C91 47.6 95 47.6 97 48.8" fill="none" stroke="#2b211c" stroke-width="1.8" stroke-linecap="round" opacity=".5" />
+            <path d="M58 34 C56 20 64 12 74 12 C80 12 84 14 86 17 C80 17 76 19 74 23 C72 28 70 33 70 38 C66 38 63 42 62 46 C59 44 58 40 58 34 Z" fill="#1d1916" />
+            <path d="M72 13 C78 10 86 12 89 18 C85 16 80 16 76 18 Z" fill="#1d1916" opacity=".55" />
+            <ellipse cx="66.5" cy="38.5" rx="4.5" ry="5.5" fill="#c4885f" />
+            <path d="M66 36 q2 2 0 5" fill="none" stroke="#bb8159" stroke-width="1" />
+            <path d="M83 29.4 L93.5 28.8" stroke="#1d1916" stroke-width="2.6" stroke-linecap="round" />
+            <ellipse cx="89" cy="34" rx="1.9" ry="1.5" fill="#1b1512" />
+            <path d="M86.6 32.6 q2.5 -1 5 0" fill="none" stroke="#1b1512" stroke-width="1" />
+            <path d="M90 52.2 q3 .5 5.4 -.6" fill="none" stroke="#8a4f3a" stroke-width="1.4" stroke-linecap="round" />
+          </g>
+            <g class="offer">
+              <line x1="244" y1="274" x2="272" y2="298" stroke="#d49a72" stroke-width="12" stroke-linecap="round" /><line x1="243" y1="272" x2="259" y2="287" stroke="url(#plaid-c)" stroke-width="17" stroke-linecap="round" />
+              <line x1="272" y1="298" x2="314" y2="276" stroke="#d49a72" stroke-width="11" stroke-linecap="round" />
+              <g class="biz-card">
+                <rect x="306" y="240" width="62" height="36" rx="3" fill="#fff" transform="rotate(-8 337 258)" />
+                <g transform="rotate(-8 337 258)">
+                  <rect x="306" y="240" width="5" height="36" fill="#5b6cff" />
+                  <text x="317" y="256" font-size="10" font-weight="700" fill="#14161f" font-family="Playfair Display, Georgia, serif">Zabu</text>
+                  <text x="317" y="265" font-size="5" fill="#4a4f5e">Website Developer</text>
+                  <text x="317" y="272" font-size="4.2" fill="#7b8090">hello@zabu.dev</text>
+                </g>
+              </g>
+              <circle cx="318" cy="274" r="6.5" fill="#d49a72" />
+            </g>
+          </g>
+        </svg>
+
+        <div class="floor floor-cafe" aria-hidden="true"></div>
+        <p class="footer-note">© <span id="year"></span> Zabu — Website Developer. <span data-i18n="footer">Crafted with GSAP &amp; a lot of coffee.</span></p>
+      </section>
+    </div>
+
+    <!-- ============ Walking character (horizontal mode) ============ -->
+    <!-- Nhân vật đi bộ — nội dung SVG do js/avatar.js dựng (trang phục đổi theo data-outfit) -->
+    <div class="walker av" id="walker" data-outfit="pod" aria-hidden="true">
+      <svg viewBox="0 0 140 250" overflow="visible"></svg>
+      <span class="walker-shadow"></span>
+    </div>
+  </main>
+
+  <!-- Mobile: thanh điều hướng sân khấu -->
+  <nav class="stage-dock glass" id="stage-dock" aria-label="Journey" hidden>
+    <div class="coach" id="coach" hidden aria-hidden="true">
+      <span class="coach-gesture"><i>👆</i></span>
+      <span data-i18n="coach.text">Swipe or tap the button below to walk with Zabu</span>
+    </div>
+    <div class="dock-tabs">
+      <button type="button" data-target="home"><span data-i18n="nav.home">Home</span><span class="dock-dots" data-dots="home"></span></button>
+      <button type="button" data-target="experience"><span data-i18n="nav.journey">Journey</span><span class="dock-dots" data-dots="experience"></span></button>
+      <button type="button" data-target="projects"><span data-i18n="nav.projects">Projects</span><span class="dock-dots" data-dots="projects"></span></button>
+      <button type="button" data-target="hobbies"><span data-i18n="nav.hobbies">Hobbies</span><span class="dock-dots" data-dots="hobbies"></span></button>
+      <button type="button" data-target="contact"><span data-i18n="nav.contact">Contact</span><span class="dock-dots" data-dots="contact"></span></button>
+    </div>
+    <div class="dock-row">
+      <button class="dock-arrow" type="button" data-step="-1" aria-label="Previous stop" data-i18n-aria="dock.prev">‹</button>
+      <button class="dock-next" type="button" data-step="1"><span class="dock-next-label"></span><span class="dock-next-icon" aria-hidden="true">→</span></button>
+    </div>
+  </nav>
+
+  <!-- Mobile: form liên hệ dạng bottom sheet -->
+  <div class="sheet" id="contact-sheet" hidden>
+    <div class="sheet-backdrop" data-close-sheet></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <button class="sheet-close" type="button" data-close-sheet aria-label="Close" data-i18n-aria="sheet.close">×</button>
+      <div class="sheet-body"></div>
+    </div>
+  </div>
+
+  <!-- ============ Case study modal ============ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-card">
+      <button class="modal-close" type="button" data-close aria-label="Close case study" data-i18n-aria="case.close">×</button>
+      <div class="modal-media" id="modal-media"></div>
+      <div class="modal-body">
+        <p class="kicker" id="modal-kicker"></p>
+        <h3 id="modal-title"></h3>
+        <div class="chips" id="modal-stack"></div>
+        <dl class="case">
+          <div><dt data-i18n="case.challenge">Challenge</dt><dd id="modal-problem"></dd></div>
+          <div><dt data-i18n="case.solution">Solution</dt><dd id="modal-solution"></dd></div>
+          <div><dt data-i18n="case.result">Result</dt><dd id="modal-result"></dd></div>
+        </dl>
+        <div class="cta-row" id="modal-links"></div>
+      </div>
+    </article>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/scenes.js" defer></script>
+  <script src="js/character.js" defer></script>
+  <script src="js/avatar.js" defer></script>
+  <script src="js/fx.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
