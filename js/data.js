@@ -28,7 +28,7 @@ window.PORTFOLIO = {
   // Thông tin dưới đây là MẪU chung chung — thay bằng công ty / vai trò / thời gian thật.
   experience: [
     {
-      period: '2014 — 2016',
+      period: '2015 — 2017',
       role: { vi: 'Nhân viên ngân hàng · mảng POS', en: 'Bank Officer · POS', zh: '银行职员 · POS', fr: 'Chargé de clientèle bancaire · TPE', cs: 'Bankovní úředník · POS' },
       company: { vi: 'Ngân hàng thương mại', en: 'Commercial Bank', zh: '商业银行', fr: 'Banque commerciale', cs: 'Komerční banka' },
       summary: {
@@ -43,7 +43,7 @@ window.PORTFOLIO = {
       scene: 'bank',
     },
     {
-      period: '2016 — 2017',
+      period: '2017 — 2018',
       role: { vi: 'Nhân viên vận hành & kỹ thuật', en: 'Operations & Tech Staff', zh: '运营与技术员', fr: 'Agent d’exploitation & technique', cs: 'Provozní a technický pracovník' },
       company: { vi: 'Máy bán hàng tự động & QR', en: 'Vending & QR Payments', zh: '自动售货机与扫码支付', fr: 'Distributeurs & paiement QR', cs: 'Prodejní automaty & QR platby' },
       summary: {
@@ -58,7 +58,7 @@ window.PORTFOLIO = {
       scene: 'ops',
     },
     {
-      period: '2017 — 2019',
+      period: '2021 — 2023',
       role: { vi: 'Nhân viên tài chính ngân hàng · Cho vay online', en: 'Banking Finance Officer · Online Lending', zh: '银行金融专员 · 线上贷款', fr: 'Conseiller financier bancaire · Crédit en ligne', cs: 'Bankovní finanční poradce · Online půjčky' },
       company: { vi: 'Tài chính ngân hàng', en: 'Banking & Finance', zh: '银行金融', fr: 'Banque & finance', cs: 'Bankovnictví & finance' },
       summary: {
@@ -73,7 +73,7 @@ window.PORTFOLIO = {
       scene: 'loan',
     },
     {
-      period: '2019 — 2020',
+      period: '2023 — 2026',
       role: { vi: 'Bán hàng Luxury & kênh online', en: 'Luxury Sales & Online', zh: '奢侈品销售与线上渠道', fr: 'Vente de luxe & e-commerce', cs: 'Luxusní prodej & online' },
       company: { vi: 'Cửa hàng điện thoại Luxury', en: 'Luxury Phone Store', zh: '奢华手机店', fr: 'Boutique de téléphones de luxe', cs: 'Obchod s luxusními telefony' },
       summary: {
@@ -88,7 +88,7 @@ window.PORTFOLIO = {
       scene: 'luxury',
     },
     {
-      period: { vi: '2020 — Nay', en: '2020 — Now', zh: '2020 — 至今', fr: '2020 — Aujourd’hui', cs: '2020 — Dosud' },
+      period: { vi: '2026 — Nay', en: '2020 — Now', zh: '2020 — 至今', fr: '2020 — Aujourd’hui', cs: '2020 — Dosud' },
       role: 'Website Developer',
       company: 'E-commerce POD',
       summary: {
