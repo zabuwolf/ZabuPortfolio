@@ -34,14 +34,16 @@ js/main.js        GSAP ScrollTrigger: pin + cuộn ngang, reveal, gallery, modal
 - **Form liên hệ**: điền `contact.formEndpoint` (ví dụ Formspree) để gửi thật. Nếu để trống, form sẽ mở ứng dụng email (mailto).
 - **Video dự án**: đặt file vào `assets/` rồi điền `video: 'assets/ten-du-an.mp4'`. Video tự play khi hover. Nếu không có video, site hiển thị một bản mock giao diện tự cuộn.
 
-## Ngôn ngữ (EN / VI)
+## Ngôn ngữ
 
-- Truy cập từ **IP Việt Nam** sẽ thấy tiếng Việt, các nước khác thấy tiếng Anh. Site tra quốc gia qua dịch vụ miễn phí `api.country.is` (dự phòng: `ipapi.co`) và cache kết quả trong phiên.
-- Trong lúc chờ mạng, site đoán nhanh theo múi giờ hoặc ngôn ngữ trình duyệt để chữ không bị nháy.
-- Người xem có thể bấm **VI / EN** trên thanh menu. Lựa chọn này được ghi nhớ và ưu tiên hơn IP.
-- Xem thử từng ngôn ngữ: thêm `?lang=vi` hoặc `?lang=en` vào URL.
-- Thêm hoặc sửa câu chữ giao diện trong `js/i18n.js`. Nội dung trong `data.js` dùng dạng `{ en: '...', vi: '...' }`.
-- Nếu deploy trên Vercel, Netlify hoặc Cloudflare, có thể đổi sang header geo của edge (ví dụ `x-vercel-ip-country`) để không cần gọi dịch vụ bên ngoài.
+**Tiếng Việt là ngôn ngữ chính.** Chữ gốc trong HTML là tiếng Việt, và khi thiếu bản dịch thì dùng tiếng Việt. Có thêm bản dịch: English, 中文 (giản thể), Français, Čeština.
+
+- **Tự chọn ngôn ngữ theo IP:** Việt Nam → vi; Trung Quốc, Đài Loan, Hồng Kông, Ma Cao, Singapore → zh; Pháp, Bỉ, Luxembourg, Monaco → fr; Séc, Slovakia → cs; các nước còn lại → en. Dữ liệu từ `api.country.is` (dự phòng `ipapi.co`), cache trong phiên.
+- Trong lúc chờ tra IP, site dùng ngôn ngữ trình duyệt nếu nằm trong danh sách, không thì dùng tiếng Việt.
+- **Menu 🌐 trên thanh điều hướng:** người xem tự chọn ngôn ngữ; lựa chọn được ghi nhớ và ưu tiên hơn IP.
+- **Xem thử:** thêm `?lang=vi`, `en`, `zh`, `fr` hoặc `cs` vào URL.
+- **Câu chữ giao diện:** sửa trong `js/i18n.js`. **Nội dung:** sửa trong `js/data.js`, dạng `{ vi, en, zh, fr, cs }`.
+- **Thêm ngôn ngữ mới:** thêm vào `LANGS` và `dict` trong `js/i18n.js`, thêm mã quốc gia vào `COUNTRY`, rồi thêm khoá tương ứng trong `data.js`.
 
 ## Cơ chế hoạt động
 

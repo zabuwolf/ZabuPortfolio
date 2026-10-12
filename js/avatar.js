@@ -259,7 +259,10 @@ window.Avatar = (() => {
     loan: { outfit: 'finance', render: (L = {}) => {
       const far = arm([72, 74], [88, 102], [96, 80], { far: true, cls: 'explain' });
       const near = arm([76, 76], [98, 100], [114, 90]);
-      const steps = L.steps || ['① Download app', '② eKYC in 2 mins', '③ Get the money'];
+      const steps = L.steps || ['① Tải ứng dụng', '② eKYC trong 2 phút', '③ Nhận tiền ngay'];
+      // co chữ cho vừa bong bóng (ngôn ngữ dài như tiếng Séc, hoặc chữ Hán rộng)
+      const units = Math.max(...steps.map((s) => [...s].reduce((n, c) => n + (/[\u2e80-\u9fff]/.test(c) ? 1.6 : 1), 0)));
+      const stepSize = Math.min(10.5, 104 / (units * 0.56)).toFixed(1);
       return `
         ${far.upper}${far.fore}
         ${standBody()}
@@ -273,7 +276,7 @@ window.Avatar = (() => {
         <g class="bubble">
           <rect x="104" y="-14" width="112" height="34" rx="11" fill="#fff" stroke="#e3e6ee" />
           <path d="M116 19 L112 30 L126 19 Z" fill="#fff" />
-          ${steps.map((s, i) => `<text class="step s${i + 1}" x="160" y="8" text-anchor="middle" font-size="10.5" font-weight="700" fill="#14161f" font-family="Inter, sans-serif">${s}</text>`).join('')}
+          ${steps.map((s, i) => `<text class="step s${i + 1}" x="160" y="8" text-anchor="middle" font-size="${stepSize}" font-weight="700" fill="#14161f">${s}</text>`).join('')}
         </g>`;
     } },
 

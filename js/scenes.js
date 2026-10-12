@@ -39,7 +39,9 @@ window.Scenes = (() => {
   }
 
   // Cỡ chữ biển hiệu vừa với độ rộng (ước lượng ~0.68em mỗi ký tự in hoa)
-  const fit = (name, width, base, spacing = 1) => Math.min(base, (width / (name.length * (0.68 + spacing / base)))).toFixed(1);
+  // (chữ Hán rộng gần gấp rưỡi chữ Latin in hoa)
+  const textUnits = (str) => [...str].reduce((n, c) => n + (/[\u2e80-\u9fff\uff00-\uffef]/.test(c) ? 1.5 : 1), 0);
+  const fit = (name, width, base, spacing = 1) => Math.min(base, width / (textUnits(name) * (0.68 + spacing / base))).toFixed(1);
 
   // Toà nhà theo ngành — viewBox 0 0 320 520, chân ở y=520
   const buildingKinds = {

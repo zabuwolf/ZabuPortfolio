@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zabu — Website Developer</title>
   <meta name="description" content="Zabu — Website Developer. A scroll-driven portfolio journey: experience, selected projects and contact." />
   <meta property="og:title" content="Zabu — Website Developer" />
-  <meta property="og:description" content="Follow the journey: experience, selected projects and how to work together." />
+  <meta property="og:description" content="Đi cùng Zabu qua hành trình: kinh nghiệm, dự án tiêu biểu và cách làm việc cùng nhau." />
   <meta name="theme-color" content="#f6f3ee" />
   <link rel="canonical" href="https://zabuportfolio.vercel.app/" />
   <meta property="og:url" content="https://zabuportfolio.vercel.app/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="vi_VN" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314161f'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EZ%3C/text%3E%3Ccircle cx='48' cy='42' r='4' fill='%23ff8a5c'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +19,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#contact" data-target="contact" data-i18n="skip">Skip to contact</a>
+  <a class="skip-link" href="#contact" data-target="contact" data-i18n="skip">Chuyển tới phần liên hệ</a>
 
   <!-- ============ NAV ============ -->
   <header class="nav">
@@ -28,18 +29,22 @@
         <span class="logo-text"><span>Zabu<span class="dot">.</span></span><small>Website Developer</small></span>
       </a>
       <nav class="nav-links" aria-label="Sections">
-        <a href="#home" data-target="home" data-i18n="nav.home">Home</a>
-        <a href="#experience" data-target="experience" data-i18n="nav.journey">Journey</a>
-        <a href="#projects" data-target="projects" data-i18n="nav.projects">Projects</a>
-        <a href="#hobbies" data-target="hobbies" data-i18n="nav.hobbies">Hobbies</a>
-        <a href="#contact" data-target="contact" data-i18n="nav.contact">Contact</a>
+        <a href="#home" data-target="home" data-i18n="nav.home">Trang chủ</a>
+        <a href="#experience" data-target="experience" data-i18n="nav.journey">Hành trình</a>
+        <a href="#projects" data-target="projects" data-i18n="nav.projects">Dự án</a>
+        <a href="#hobbies" data-target="hobbies" data-i18n="nav.hobbies">Sở thích</a>
+        <a href="#contact" data-target="contact" data-i18n="nav.contact">Liên hệ</a>
       </nav>
       <div class="nav-actions">
-        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="nav.lang">
-          <button type="button" data-lang="vi" aria-pressed="false">VI</button>
-          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <div class="lang-menu">
+          <button class="lang-toggle" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Ngôn ngữ" data-i18n-aria="nav.lang">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+            <span class="lang-current">VI</span>
+            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <ul class="lang-list" role="menu"></ul>
         </div>
-        <a class="btn btn-primary btn-sm" href="#contact" data-target="contact" data-i18n="nav.cta">Let’s talk</a>
+        <a class="btn btn-primary btn-sm" href="#contact" data-target="contact" data-i18n="nav.cta">Trò chuyện nhé</a>
       </div>
     </div>
     <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
@@ -51,20 +56,20 @@
       <!-- ============ 1. HERO — bắt đầu ngày mới ============ -->
       <section class="panel panel-hero" id="home" aria-label="Introduction">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="pulse"></span> <span data-i18n="hero.eyebrow">Available for new projects</span></p>
+          <p class="eyebrow"><span class="pulse"></span> <span data-i18n="hero.eyebrow">Đang nhận dự án mới</span></p>
           <h1>
             <span class="h1-name">Zabu</span>
             <span class="h1-role">Website Developer</span>
           </h1>
-          <p class="lead" data-i18n="hero.lead">I design and build fast, accessible, story-driven websites — from pixel-perfect landing pages to full-stack web apps.</p>
+          <p class="lead" data-i18n="hero.lead">Tôi thiết kế và xây dựng những website nhanh, thân thiện và biết kể chuyện — từ landing page chỉn chu đến web app full-stack.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#projects" data-target="projects" data-i18n="hero.ctaProjects">View projects</a>
-            <a class="btn btn-ghost" href="#contact" data-target="contact" data-i18n="hero.ctaContact">Contact me</a>
+            <a class="btn btn-primary" href="#projects" data-target="projects" data-i18n="hero.ctaProjects">Xem dự án</a>
+            <a class="btn btn-ghost" href="#contact" data-target="contact" data-i18n="hero.ctaContact">Liên hệ</a>
           </div>
           <dl class="stats">
-            <div><dt>10+</dt><dd data-i18n="hero.stat1">years building for the web</dd></div>
-            <div><dt>40+</dt><dd data-i18n="hero.stat2">websites shipped</dd></div>
-            <div><dt>98</dt><dd data-i18n="hero.stat3">avg. Lighthouse score</dd></div>
+            <div><dt>10+</dt><dd data-i18n="hero.stat1">năm làm web</dd></div>
+            <div><dt>40+</dt><dd data-i18n="hero.stat2">website đã bàn giao</dd></div>
+            <div><dt>98</dt><dd data-i18n="hero.stat3">điểm Lighthouse trung bình</dd></div>
           </dl>
         </div>
 
@@ -233,7 +238,7 @@
 
         <div class="door door-exit" aria-hidden="true"><span>EXIT</span></div>
         <div class="floor floor-office" aria-hidden="true"></div>
-        <div class="scroll-hint" id="scroll-hint" aria-hidden="true"><span class="mouse"></span><span class="hint-scroll" data-i18n="hint.scroll">Scroll to start the journey</span><span class="hint-swipe" data-i18n="hint.tap">Tap › or swipe to start the journey</span></div>
+        <div class="scroll-hint" id="scroll-hint" aria-hidden="true"><span class="mouse"></span><span class="hint-scroll" data-i18n="hint.scroll">Cuộn chuột để bắt đầu hành trình</span><span class="hint-swipe" data-i18n="hint.tap">Chạm › hoặc vuốt để bắt đầu hành trình</span></div>
       </section>
 
       <!-- ============ 2. EXPERIENCE — hành trình sự nghiệp ============ -->
@@ -244,9 +249,9 @@
         <div class="skyline skyline-near parallax" data-speed="0.25" aria-hidden="true"></div>
 
         <div class="section-intro journey-intro reveal">
-          <p class="kicker" data-i18n="exp.kicker">01 — The journey</p>
-          <h2 id="exp-title" data-i18n-html="exp.title">Every stop taught me <em>something new.</em></h2>
-          <p data-i18n="exp.text">Scroll to walk through the places I’ve built for — each stop is a chapter of my career.</p>
+          <p class="kicker" data-i18n="exp.kicker">01 — Hành trình</p>
+          <h2 id="exp-title" data-i18n-html="exp.title">Mỗi điểm dừng cho tôi <em>một bài học mới.</em></h2>
+          <p data-i18n="exp.text">Cuộn để đi qua những nơi tôi đã làm việc — mỗi trạm là một chương trong sự nghiệp.</p>
         </div>
         <div class="stations" id="stations"></div>
         <div class="floor floor-street" aria-hidden="true"></div>
@@ -256,9 +261,9 @@
       <section class="panel panel-gallery" id="projects" aria-labelledby="proj-title">
         <div class="door door-gallery" aria-hidden="true"><span>GALLERY</span></div>
         <div class="section-intro gallery-intro reveal">
-          <p class="kicker" data-i18n="proj.kicker">02 — Digital gallery</p>
-          <h2 id="proj-title" data-i18n-html="proj.title">Selected <em>work.</em></h2>
-          <p data-i18n="proj.text">Hover or tap a piece to bring it to life. Each one opens into a short case study.</p>
+          <p class="kicker" data-i18n="proj.kicker">02 — Phòng triển lãm số</p>
+          <h2 id="proj-title" data-i18n-html="proj.title">Dự án <em>tiêu biểu.</em></h2>
+          <p data-i18n="proj.text">Rê chuột hoặc chạm vào một tác phẩm để xem nó chuyển động. Mỗi dự án đều có case study ngắn.</p>
         </div>
         <div class="frames" id="frames"></div>
         <div class="floor floor-gallery" aria-hidden="true"></div>
@@ -267,9 +272,9 @@
       <!-- ============ 4. HOBBIES — ngoài giờ code ============ -->
       <section class="panel panel-hobbies" id="hobbies" aria-labelledby="hob-title">
         <div class="section-intro hobbies-intro reveal">
-          <p class="kicker" data-i18n="hob.kicker">03 — Off the clock</p>
-          <h2 id="hob-title" data-i18n-html="hob.title">Life beyond <em>the keyboard.</em></h2>
-          <p data-i18n="hob.text">Keep walking — this is what keeps me curious and recharged.</p>
+          <p class="kicker" data-i18n="hob.kicker">03 — Ngoài giờ code</p>
+          <h2 id="hob-title" data-i18n-html="hob.title">Cuộc sống ngoài <em>bàn phím.</em></h2>
+          <p data-i18n="hob.text">Đi tiếp nào — đây là những thứ giúp tôi luôn tò mò và nạp lại năng lượng.</p>
         </div>
         <div class="hobbies" id="hobbies-list"></div>
         <div class="floor floor-hobbies" aria-hidden="true"></div>
@@ -278,16 +283,16 @@
       <!-- ============ 5. CONTACT — kết nối ============ -->
       <section class="panel panel-contact" id="contact" aria-labelledby="contact-title">
         <div class="contact-card glass-dark reveal">
-          <p class="kicker" data-i18n="contact.kicker">04 — Let’s connect</p>
-          <h2 id="contact-title" data-i18n-html="contact.title">Have a project in mind? <em>Let’s grab a coffee.</em></h2>
+          <p class="kicker" data-i18n="contact.kicker">04 — Kết nối</p>
+          <h2 id="contact-title" data-i18n-html="contact.title">Bạn đang có ý tưởng? <em>Cùng đi cà phê nhé.</em></h2>
           <form class="contact-form" id="contact-form" novalidate>
             <div class="field-row">
-              <label class="field"><span data-i18n="form.name">Name</span><input name="name" type="text" autocomplete="name" required placeholder="Your name" data-i18n-ph="form.namePh" /></label>
+              <label class="field"><span data-i18n="form.name">Họ tên</span><input name="name" type="text" autocomplete="name" required placeholder="Tên của bạn" data-i18n-ph="form.namePh" /></label>
               <label class="field"><span data-i18n="form.email">Email</span><input name="email" type="email" autocomplete="email" required placeholder="you@company.com" /></label>
             </div>
-            <label class="field"><span data-i18n="form.message">Message</span><textarea data-i18n-ph="form.messagePh" name="message" rows="4" required placeholder="Tell me about your project, timeline and budget…"></textarea></label>
+            <label class="field"><span data-i18n="form.message">Lời nhắn</span><textarea data-i18n-ph="form.messagePh" name="message" rows="4" required placeholder="Dự án của bạn là gì, thời gian và ngân sách dự kiến…"></textarea></label>
             <div class="form-foot">
-              <button class="btn btn-primary" type="submit" data-i18n="form.send">Send message</button>
+              <button class="btn btn-primary" type="submit" data-i18n="form.send">Gửi tin nhắn</button>
               <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </div>
           </form>
@@ -295,9 +300,9 @@
         </div>
 
         <div class="cafe-caption">
-          <p class="kicker" data-i18n="contact.kicker">04 — Let’s connect</p>
-          <h2><em data-i18n="contact.caption">Coffee’s on me.</em></h2>
-          <p data-i18n="contact.captionText">Tell me about your project — I reply within 24 hours.</p>
+          <p class="kicker" data-i18n="contact.kicker">04 — Kết nối</p>
+          <h2><em data-i18n="contact.caption">Cà phê tôi mời.</em></h2>
+          <p data-i18n="contact.captionText">Kể tôi nghe về dự án của bạn — bấm “Viết lời nhắn” bên dưới. Tôi phản hồi trong 24 giờ.</p>
         </div>
 
         <svg class="scene cafe-scene" viewBox="0 0 600 420" role="img" aria-label="Zabu at a café table offering a business card">
@@ -435,7 +440,7 @@
         </svg>
 
         <div class="floor floor-cafe" aria-hidden="true"></div>
-        <p class="footer-note">© <span id="year"></span> Zabu — Website Developer. <span data-i18n="footer">Crafted with GSAP &amp; a lot of coffee.</span></p>
+        <p class="footer-note">© <span id="year"></span> Zabu — Website Developer. <span data-i18n="footer">Được làm bằng GSAP và rất nhiều cà phê.</span></p>
       </section>
     </div>
 
@@ -451,17 +456,17 @@
   <nav class="stage-dock glass" id="stage-dock" aria-label="Journey" hidden>
     <div class="coach" id="coach" hidden aria-hidden="true">
       <span class="coach-gesture"><i>👆</i></span>
-      <span data-i18n="coach.text">Swipe or tap the button below to walk with Zabu</span>
+      <span data-i18n="coach.text">Vuốt sang hoặc bấm nút bên dưới để đi cùng Zabu</span>
     </div>
     <div class="dock-tabs">
-      <button type="button" data-target="home"><span data-i18n="nav.home">Home</span><span class="dock-dots" data-dots="home"></span></button>
-      <button type="button" data-target="experience"><span data-i18n="nav.journey">Journey</span><span class="dock-dots" data-dots="experience"></span></button>
-      <button type="button" data-target="projects"><span data-i18n="nav.projects">Projects</span><span class="dock-dots" data-dots="projects"></span></button>
-      <button type="button" data-target="hobbies"><span data-i18n="nav.hobbies">Hobbies</span><span class="dock-dots" data-dots="hobbies"></span></button>
-      <button type="button" data-target="contact"><span data-i18n="nav.contact">Contact</span><span class="dock-dots" data-dots="contact"></span></button>
+      <button type="button" data-target="home"><span data-i18n="nav.home">Trang chủ</span><span class="dock-dots" data-dots="home"></span></button>
+      <button type="button" data-target="experience"><span data-i18n="nav.journey">Hành trình</span><span class="dock-dots" data-dots="experience"></span></button>
+      <button type="button" data-target="projects"><span data-i18n="nav.projects">Dự án</span><span class="dock-dots" data-dots="projects"></span></button>
+      <button type="button" data-target="hobbies"><span data-i18n="nav.hobbies">Sở thích</span><span class="dock-dots" data-dots="hobbies"></span></button>
+      <button type="button" data-target="contact"><span data-i18n="nav.contact">Liên hệ</span><span class="dock-dots" data-dots="contact"></span></button>
     </div>
     <div class="dock-row">
-      <button class="dock-arrow" type="button" data-step="-1" aria-label="Previous stop" data-i18n-aria="dock.prev">‹</button>
+      <button class="dock-arrow" type="button" data-step="-1" aria-label="Điểm dừng trước" data-i18n-aria="dock.prev">‹</button>
       <button class="dock-next" type="button" data-step="1"><span class="dock-next-label"></span><span class="dock-next-icon" aria-hidden="true">→</span></button>
     </div>
   </nav>
@@ -470,7 +475,7 @@
   <div class="sheet" id="contact-sheet" hidden>
     <div class="sheet-backdrop" data-close-sheet></div>
     <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
-      <button class="sheet-close" type="button" data-close-sheet aria-label="Close" data-i18n-aria="sheet.close">×</button>
+      <button class="sheet-close" type="button" data-close-sheet aria-label="Đóng" data-i18n-aria="sheet.close">×</button>
       <div class="sheet-body"></div>
     </div>
   </div>
@@ -479,16 +484,16 @@
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal-backdrop" data-close></div>
     <article class="modal-card">
-      <button class="modal-close" type="button" data-close aria-label="Close case study" data-i18n-aria="case.close">×</button>
+      <button class="modal-close" type="button" data-close aria-label="Đóng case study" data-i18n-aria="case.close">×</button>
       <div class="modal-media" id="modal-media"></div>
       <div class="modal-body">
         <p class="kicker" id="modal-kicker"></p>
         <h3 id="modal-title"></h3>
-        <div class="chips" id="modal-stack"></div>
+        <ul class="chips" id="modal-stack"></ul>
         <dl class="case">
-          <div><dt data-i18n="case.challenge">Challenge</dt><dd id="modal-problem"></dd></div>
-          <div><dt data-i18n="case.solution">Solution</dt><dd id="modal-solution"></dd></div>
-          <div><dt data-i18n="case.result">Result</dt><dd id="modal-result"></dd></div>
+          <div><dt data-i18n="case.challenge">Thử thách</dt><dd id="modal-problem"></dd></div>
+          <div><dt data-i18n="case.solution">Giải pháp</dt><dd id="modal-solution"></dd></div>
+          <div><dt data-i18n="case.result">Kết quả</dt><dd id="modal-result"></dd></div>
         </dl>
         <div class="cta-row" id="modal-links"></div>
       </div>
