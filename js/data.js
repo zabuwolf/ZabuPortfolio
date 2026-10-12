@@ -87,7 +87,7 @@ window.PORTFOLIO = {
       scene: 'luxury',
     },
     {
-      period: { vi: '2026 — Nay', en: '2020 — Now', zh: '2020 — 至今', fr: '2020 — Aujourd’hui', cs: '2020 — Dosud' },
+      period: { vi: '2026 — Nay', en: '2026 — Now', zh: '2026 — 至今', fr: '2026 — Aujourd’hui', cs: '2026 — Dosud' },
       role: 'Website Developer',
       company: 'E-commerce POD',
       summary: {
