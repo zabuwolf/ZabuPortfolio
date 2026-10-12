@@ -337,7 +337,10 @@
 
   /* ---------------- Scroll story (GSAP ScrollTrigger) ---------------- */
   function setupMotion() {
-    if (!window.gsap || !window.ScrollTrigger) return; // fallback: bố cục dọc, vẫn đầy đủ nội dung
+    if (!window.gsap || !window.ScrollTrigger) {
+      html.classList.remove('h-mode', 'm-mode'); // fallback: bố cục dọc, vẫn đầy đủ nội dung
+      return;
+    }
     gsap.registerPlugin(ScrollTrigger);
 
     const mm = gsap.matchMedia();
@@ -351,6 +354,7 @@
         const { desktop, mobile, reduce } = ctx.conditions;
         if (desktop) return journeyStory();
         if (mobile) return stageStory();
+        html.classList.remove('h-mode', 'm-mode'); // bố cục dọc (màn hình thấp / giảm chuyển động)
         if (!reduce) verticalStory();
         return undefined;
       }
@@ -482,6 +486,7 @@
   // Mỗi trạm / sở thích có một "vùng dừng": thế giới đứng yên thêm một quãng cuộn để cảnh không vụt qua,
   // và khi người dùng ngừng cuộn gần một cảnh, trang hút nhẹ vào đúng tâm cảnh đó (ưu tiên theo chiều đang cuộn).
   function journeyStory() {
+    html.classList.remove('m-mode');
     html.classList.add('h-mode');
 
     const journey = $('#journey');
@@ -843,8 +848,12 @@
   setupForm();
   // GSAP được load bằng defer trước main.js nên đã sẵn sàng ở đây
   setupMotion();
-  // Đợi font load xong để đo lại kích thước
-  document.fonts?.ready.then(() => window.ScrollTrigger?.refresh());
+  // Đợi font load xong để đo lại kích thước, rồi mới cho khối chữ hero hiện ra (tránh nhảy bố cục khi tải trang)
+  const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+  Promise.race([fontsReady, new Promise((r) => setTimeout(r, 1500))]).then(() => {
+    window.ScrollTrigger?.refresh();
+    requestAnimationFrame(() => html.classList.add('is-ready'));
+  });
 
   L.onChange(() => {
     renderContent();

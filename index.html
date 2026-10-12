@@ -17,6 +17,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Chọn bố cục (ngang / mobile) ngay từ khung hình đầu tiên để nội dung không nhảy khi JS tải xong.
+    // Phải khớp điều kiện trong setupMotion() của js/main.js.
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (matchMedia('(min-width: 901px) and (min-height: 540px)').matches) d.classList.add('h-mode');
+        else if (matchMedia('(max-width: 900px) and (orientation: portrait)').matches) d.classList.add('h-mode', 'm-mode');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#contact" data-target="contact" data-i18n="skip">Chuyển tới phần liên hệ</a>
