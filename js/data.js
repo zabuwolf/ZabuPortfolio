@@ -217,7 +217,7 @@ window.PORTFOLIO = {
       link: 'https://hocmoigioipro.com',
       repo: '',
       role: { vi: 'Thiết kế & Lập trình', en: 'Design & Development', zh: '设计与开发', fr: 'Design & développement', cs: 'Design & vývoj' },
-      stack: ['WordPress', 'LMS', 'Thanh toán online'],
+      stack: ['Next.js', 'LMS', 'Thanh toán online'],
       problem: {
         vi: 'Một đơn vị đào tạo môi giới bất động sản muốn chuyển từ lớp học trực tiếp sang bán khoá học online, nhưng chưa có nền tảng để học viên đăng ký, thanh toán và học theo lộ trình.',
         en: 'A real-estate brokerage training provider wanted to move from in-person classes to online courses, but had no platform for students to enrol, pay and follow a learning path.',
@@ -251,7 +251,7 @@ window.PORTFOLIO = {
       link: 'https://thammykimhoo.vn',
       repo: '',
       role: { vi: 'Thiết kế & Lập trình', en: 'Design & Development', zh: '设计与开发', fr: 'Design & développement', cs: 'Design & vývoj' },
-      stack: ['WordPress', 'Landing page', 'SEO'],
+      stack: ['Next.js', 'Landing page', 'SEO'],
       problem: {
         vi: 'Một thẩm mỹ viện có khách quen đông nhưng khách mới chỉ tìm thấy qua Facebook — không có nơi nào giới thiệu dịch vụ, bảng giá và đặt lịch một cách chuyên nghiệp.',
         en: 'A beauty clinic with loyal regulars, but new customers could only find it on Facebook — nowhere to present services, pricing and bookings professionally.',
