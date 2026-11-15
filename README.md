@@ -34,6 +34,34 @@ js/main.js        GSAP ScrollTrigger: pin + cuộn ngang, reveal, gallery, modal
 - **Form liên hệ**: điền `contact.formEndpoint` (ví dụ Formspree) để gửi thật. Nếu để trống, form sẽ mở ứng dụng email (mailto).
 - **Video dự án**: đặt file vào `assets/` rồi điền `video: 'assets/ten-du-an.mp4'`. Video tự play khi hover. Nếu không có video, site hiển thị một bản mock giao diện tự cuộn.
 
+## Hồ sơ ứng tuyển Genesis Escape (`/genesis-cv`)
+
+Hai trang phụ, đều đặt `noindex` và không xuất hiện trong menu của trang chính:
+
+| Đường dẫn | Nội dung |
+| --- | --- |
+| `/genesis-cv` | CV ứng tuyển CTV Game Master / NPC nhập vai. Dùng chung engine cuộn ngang, nhân vật và `css/style.css` với trang chính, bỏ mục dự án, thêm theme đêm và cảnh hoá trang NPC. |
+| `/genesis-cv/web` | Bản concept thiết kế lại website Genesis Escape, gửi kèm hồ sơ. **Không phải website chính thức.** |
+
+```
+genesis-cv/index.html        Khung trang CV
+genesis-cv/css/cv.css        Theme kinh dị đè lên css/style.css
+genesis-cv/js/cv-data.js     ★ NỘI DUNG CV: thông tin cá nhân, liên hệ, kinh nghiệm, kỹ năng, sở thích
+genesis-cv/js/cv-scenes.js   Hình riêng của CV: hoá trang "ma mới", cảnh thử vai, minh hoạ kỹ năng, mặt tiền Genesis
+genesis-cv/js/cv-main.js     Bản rút gọn của js/main.js (không có gallery dự án, không có form)
+genesis-cv/web/index.html    Khung trang concept
+genesis-cv/web/css/genesis.css
+genesis-cv/web/js/data.js    ★ DỮ LIỆU concept: cơ sở, phòng, giá, voucher, review mẫu, JD
+genesis-cv/web/js/store.js   "Máy chủ" giả bằng localStorage: tài khoản, ví, vé, lịch trống
+genesis-cv/web/js/art.js     Poster SVG từng phòng + mã QR giả
+genesis-cv/web/js/app.js     Giao diện và các luồng: đặt phòng, tài khoản, ví, review
+genesis-cv/web/js/fx.js      Hiệu ứng: đèn pin, tàn lửa, tilt, cuộn ngang "Cách chơi", âm thanh nền
+```
+
+- **Sửa CV**: mọi câu chữ nằm trong `genesis-cv/js/cv-data.js`. `facts` là thông tin cá nhân (dòng nào để trống sẽ tự ẩn), `contacts` là các dòng liên hệ (muốn thêm email thì thêm một dòng theo mẫu ghi sẵn trong file).
+- **Concept là bản demo**: tên phòng, địa chỉ, hotline, quy trình và JD lấy từ thông tin công khai của Genesis; mô tả phòng, giá, lịch trống, voucher và review mẫu là minh hoạ. Tài khoản, ví, vé chỉ lưu trong `localStorage` của trình duyệt (khoá `genesis-concept-v1`), mã QR là giả và không có giao dịch nào phát sinh. Nút "Xoá dữ liệu demo" ở chân trang xoá toàn bộ.
+- **Ảnh chia sẻ**: `genesis-cv/assets/og.jpg` và `og-web.jpg` (1200×630).
+
 ## Ngôn ngữ
 
 **Tiếng Việt là ngôn ngữ chính.** Chữ gốc trong HTML là tiếng Việt, và khi thiếu bản dịch thì dùng tiếng Việt. Có thêm bản dịch: English, 中文 (giản thể), Français, Čeština.

@@ -31,6 +31,10 @@ window.Avatar = (() => {
     document.body.prepend(wrap.firstElementChild);
   }
 
+  // Điểm mở rộng cho trang con (vd. /genesis-cv): chèn thêm chi tiết lên đầu nhân vật (tóc giả, hoá trang…).
+  // Để trống thì nhân vật giữ nguyên như trang chính.
+  const extras = { head: '' };
+
   // ---------- Đầu ----------
   function head(dx = 0, dy = 0, { headset = false } = {}) {
     return `<g class="head" transform="translate(${dx} ${dy})">
@@ -75,6 +79,7 @@ window.Avatar = (() => {
       ${headset ? `<path d="M59 34 C57 5 97 3 98 28" fill="none" stroke="#1b1d24" stroke-width="4.5" stroke-linecap="round" />
         <ellipse cx="67" cy="38" rx="7.5" ry="9.5" fill="#1b1d24" /><ellipse class="rgb" cx="67" cy="38" rx="3.6" ry="5.4" fill="url(#av-rgb)" />
         <path d="M70 47 Q78 61 90 55" fill="none" stroke="#1b1d24" stroke-width="2" /><circle cx="91" cy="55" r="2.4" fill="#1b1d24" />` : ''}
+      ${extras.head}
     </g>`;
   }
 
@@ -409,5 +414,11 @@ window.Avatar = (() => {
 
   const carryOf = (scene) => (SCENES[scene] ? SCENES[scene].carry || SCENES[scene].outfit : 'pod');
 
-  return { mountDefs, rig, actor, carryOf };
+  // Trang con có thể đăng ký thêm cảnh diễn, dựng từ cùng bộ phận cơ thể (parts).
+  const parts = { arm, head, collar, standBody, seatBody };
+  const addScene = (name, def) => {
+    SCENES[name] = def;
+  };
+
+  return { mountDefs, rig, actor, carryOf, parts, extras, addScene };
 })();

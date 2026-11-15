@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genesis Escape — Giải mã kỳ án (bản concept của Zabu)</title>
+  <meta name="description" content="Bản concept thiết kế lại website Genesis Escape do Zabu thực hiện kèm hồ sơ ứng tuyển. Không phải website chính thức; dữ liệu, giá và lịch chỉ là minh hoạ." />
+  <!-- Bản concept cá nhân: không cho công cụ tìm kiếm lập chỉ mục để tránh nhầm với website chính thức -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#07080b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Genesis Escape — bản concept thiết kế lại (không chính thức)" />
+  <meta property="og:description" content="Concept do Zabu thực hiện kèm hồ sơ ứng tuyển “ma mới”. Dữ liệu chỉ là minh hoạ." />
+  <meta property="og:image" content="https://zabudev.com/genesis-cv/assets/og-web.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307080b'/%3E%3Cpath d='M44 24a14 14 0 1 0 2 14H33' fill='none' stroke='%23e0242f' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/genesis-cv/web/css/genesis.css" />
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <!-- Màn mở đầu -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pre-mark">GENESIS</div>
+    <div class="pre-bar"><span></span></div>
+    <p class="pre-note">Đang mở hồ sơ vụ án…</p>
+  </div>
+
+  <!-- Nhãn concept: luôn hiển thị để không ai nhầm đây là website chính thức -->
+  <div class="ribbon" role="note">
+    <span class="ribbon-tag">CONCEPT</span>
+    <span class="ribbon-text">Bản thiết kế lại <b>không chính thức</b> do Zabu thực hiện kèm hồ sơ ứng tuyển. Giá, lịch, tài khoản đều là dữ liệu minh hoạ, không có giao dịch thật.</span>
+    <a href="/genesis-cv">← Hồ sơ của Zabu</a>
+    <a href="https://genesis-escape.vn/" target="_blank" rel="noopener">Website chính thức ↗</a>
+  </div>
+
+  <header class="top" id="top">
+    <a class="brand" href="#hero" aria-label="Genesis Escape — đầu trang"><b>GENESIS</b><span>ESCAPE</span></a>
+    <nav class="menu" id="menu" aria-label="Điều hướng chính">
+      <a href="#rooms">Phòng chơi</a>
+      <a href="#schedule">Lịch trống</a>
+      <a href="#pricing">Bảng giá</a>
+      <a href="#howto">Cách chơi</a>
+      <a href="#reviews">Review</a>
+      <a href="#hiring">Tuyển “ma mới”</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="sound-btn" type="button" aria-pressed="false" aria-label="Bật âm thanh nền" title="Âm thanh nền">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z" fill="currentColor"/><path class="snd-wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="snd-off" d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <button class="acct-btn" id="acct-btn" type="button" aria-label="Đăng nhập"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4s6.3 1.8 7.5 5.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Đăng nhập</span></button>
+      <button class="btn btn-red btn-sm magnetic" type="button" data-book>Đặt phòng</button>
+      <button class="burger" id="burger" type="button" aria-label="Mở menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-scene" aria-hidden="true">
+        <svg class="corridor" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="h-door" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff3b45" stop-opacity=".95"/><stop offset=".45" stop-color="#e0242f" stop-opacity=".35"/><stop offset="1" stop-color="#e0242f" stop-opacity="0"/></radialGradient>
+            <linearGradient id="h-floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0242f" stop-opacity=".5"/><stop offset="1" stop-color="#e0242f" stop-opacity="0"/></linearGradient>
+          </defs>
+          <g class="cor-lines" fill="none" stroke="#2a2f3c" stroke-width="2">
+            <path d="M0 0 700 350M1600 0 900 350M0 900 700 560M1600 900 900 560"/>
+            <rect x="700" y="350" width="200" height="210"/>
+            <rect x="560" y="280" width="480" height="350" opacity=".7"/>
+            <rect x="380" y="190" width="840" height="530" opacity=".5"/>
+            <rect x="140" y="70" width="1320" height="770" opacity=".35"/>
+          </g>
+          <g class="cor-lamps" fill="#ffb347">
+            <circle cx="800" cy="300" r="3"/><circle cx="800" cy="215" r="5"/><circle cx="800" cy="110" r="8"/>
+          </g>
+          <ellipse class="cor-glow" cx="800" cy="455" rx="330" ry="300" fill="url(#h-door)"/>
+          <path class="cor-spill" d="M745 560h110l230 340H515z" fill="url(#h-floor)"/>
+          <g class="cor-door">
+            <rect x="745" y="375" width="110" height="185" fill="#12060a" stroke="#e0242f" stroke-width="3"/>
+            <rect class="cor-gap" x="745" y="375" width="26" height="185" fill="#ff3b45"/>
+            <circle cx="836" cy="470" r="4" fill="#ffb347"/>
+          </g>
+          <g class="cor-figure" fill="#050507">
+            <ellipse cx="800" cy="420" rx="13" ry="15"/><path d="M780 440q20-10 40 0l8 110h-56z"/>
+          </g>
+          <g class="cor-writing" font-family="Oswald, sans-serif" font-weight="700" fill="#e0242f">
+            <text x="150" y="330" font-size="56" transform="rotate(-9 150 330)">ĐỪNG QUAY LẠI</text>
+            <text x="1120" y="250" font-size="44" transform="rotate(7 1120 250)">NÓ NGHE THẤY</text>
+            <text x="1180" y="700" font-size="38" transform="rotate(-5 1180 700)">13 : 00</text>
+            <g class="cor-eyes" fill="#fff"><ellipse cx="300" cy="620" rx="9" ry="4"/><ellipse cx="334" cy="620" rx="9" ry="4"/></g>
+          </g>
+        </svg>
+        <canvas class="embers" id="embers"></canvas>
+        <div class="fog fog-a"></div>
+        <div class="fog fog-b"></div>
+        <div class="torch" id="torch"></div>
+        <div class="grain"></div>
+      </div>
+
+      <div class="hero-body">
+        <p class="kicker"><i class="dot"></i> Chuỗi trò chơi nhập vai kinh dị · Hà Nội · TP. Hồ Chí Minh</p>
+        <h1 class="hero-title" aria-label="Giải mã kỳ án">
+          <span class="line"><span class="glitch" data-text="GIẢI MÃ">GIẢI MÃ</span></span>
+          <span class="line"><span class="glitch red" data-text="KỲ ÁN">KỲ ÁN</span></span>
+        </h1>
+        <p class="hero-lead">60 đến 120 phút sống trong một bộ phim kinh dị, nơi bạn là nhân vật chính và những “con ma” là người thật. Lập đội 4 – 8 người, bước qua cánh cửa, và đừng quay đầu lại.</p>
+        <div class="hero-cta">
+          <button class="btn btn-red btn-lg magnetic" type="button" data-book>Đặt phòng ngay <span aria-hidden="true">→</span></button>
+          <a class="btn btn-line btn-lg" href="#rooms">Xem phòng chơi</a>
+        </div>
+        <p class="torch-hint" id="torch-hint">Rê chuột để soi đèn pin vào bóng tối</p>
+      </div>
+
+      <form class="quick" id="quick" aria-label="Tìm suất nhanh">
+        <label><span>Cơ sở</span><select name="facility" id="q-facility"></select></label>
+        <label><span>Phòng</span><select name="room" id="q-room"></select></label>
+        <label><span>Ngày</span><input type="date" name="date" id="q-date" /></label>
+        <label><span>Số người</span><select name="players" id="q-players"></select></label>
+        <button class="btn btn-red" type="submit">Tìm suất trống</button>
+      </form>
+      <svg class="drip" viewBox="0 0 1600 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1600v8c-40 0-46 30-70 30s-22-30-64-30-50 0-80 0-24 52-48 52-20-52-52-52-80 0-120 0-26 22-44 22-18-22-50-22-90 0-130 0-22 38-44 38-22-38-54-38-110 0-150 0-24 60-46 60-22-60-56-60-70 0-110 0-22 26-42 26-20-26-52-26-100 0-140 0-22 44-44 44-22-44-54-44-50 0-80 0z" fill="#07080b"/></svg>
+    </section>
+
+    <!-- Dải chạy thể loại -->
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- ============ VỀ GENESIS ============ -->
+    <section class="sec about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <p class="kicker rv">Hồ sơ số 00 — Về Genesis</p>
+          <h2 class="title rv">Không chỉ là giải đố.<br /><em>Là bước vào một vụ án.</em></h2>
+          <p class="lead rv">Tiền thân là <b>We Escape</b>, từng xuất hiện tại <b>Shark Tank Việt Nam mùa 2</b>, Genesis hôm nay là hệ thống trò chơi giải đố nhập vai kinh dị với 2 cơ sở tại Hà Nội và 1 cơ sở tại TP. Hồ Chí Minh.</p>
+          <p class="rv muted">Mỗi phòng là một kịch bản điện ảnh thu nhỏ: bối cảnh dựng thật, âm thanh ánh sáng theo từng nhịp truyện, và đội ngũ Game Master (a.k.a. “Ma”) nhập vai xuyên suốt để không lượt chơi nào giống lượt nào.</p>
+        </div>
+        <ul class="pillars">
+          <li class="pillar rv"><b data-count="3">3</b><span>cơ sở<br />Hà Nội · TP. HCM</span></li>
+          <li class="pillar rv"><b><span data-count="60">60</span>–<span data-count="120">120</span></b><span>phút mỗi<br />lượt chơi</span></li>
+          <li class="pillar rv"><b><span data-count="4">4</span>–<span data-count="8">8</span></b><span>người<br />một đội</span></li>
+          <li class="pillar rv"><b><span data-count="13">13</span></b><span>suất mỗi ngày<br />cho mỗi phòng</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PHÒNG CHƠI ============ -->
+    <section class="sec rooms" id="rooms">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="kicker rv">Hồ sơ số 01 — Phòng chơi</p>
+            <h2 class="title rv">Chọn vụ án <em>của bạn.</em></h2>
+          </div>
+          <div class="tabs rv" id="city-tabs" role="tablist" aria-label="Thành phố"></div>
+        </div>
+        <div class="chips rv" id="tag-chips" aria-label="Lọc theo thể loại"></div>
+        <div class="room-grid" id="room-grid"></div>
+        <p class="fine">Mô tả, độ khó, độ kinh dị, thời lượng và cơ sở của từng phòng trong bản concept này là minh hoạ.</p>
+      </div>
+    </section>
+
+    <!-- ============ LỊCH TRỐNG ============ -->
+    <section class="sec schedule" id="schedule">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="kicker rv">Hồ sơ số 02 — Lịch trống</p>
+            <h2 class="title rv">Còn suất nào <em>đêm nay?</em></h2>
+          </div>
+          <div class="legend rv"><span><i class="lg free"></i>Còn trống</span><span><i class="lg busy"></i>Đã đặt</span><span><i class="lg mine"></i>Vé của bạn</span></div>
+        </div>
+        <div class="sch-filters rv">
+          <div class="tabs" id="sch-facility" role="tablist" aria-label="Cơ sở"></div>
+          <label class="sel"><span>Độ khó</span><select id="sch-diff"><option value="">Tất cả</option><option>4.0</option><option>4.5</option><option>5.0</option></select></label>
+          <label class="sel"><span>Độ kinh dị</span><select id="sch-horror"><option value="">Tất cả</option><option>4.0</option><option>4.5</option><option>5.0</option></select></label>
+          <label class="sel"><span>Khung giờ</span><select id="sch-part"><option value="">Cả ngày</option><option>Sáng</option><option>Chiều</option><option>Tối</option></select></label>
+        </div>
+        <div class="days rv" id="sch-days" role="tablist" aria-label="Ngày"></div>
+        <div class="sch-table rv" id="sch-table" tabindex="0" aria-label="Bảng lịch trống theo phòng và suất"></div>
+      </div>
+    </section>
+
+    <!-- ============ BẢNG GIÁ ============ -->
+    <section class="sec pricing" id="pricing">
+      <div class="wrap">
+        <p class="kicker rv">Hồ sơ số 03 — Bảng giá &amp; ưu đãi</p>
+        <h2 class="title rv">Càng đông, <em>càng nhẹ ví.</em></h2>
+        <div class="price-grid">
+          <div class="card price-card rv" id="price-table"></div>
+          <div class="price-side">
+            <div class="card rv" id="extras-card"></div>
+            <div class="card rv" id="voucher-card"></div>
+          </div>
+        </div>
+        <div class="wallet-band rv" id="wallet-band"></div>
+        <p class="fine">Bảng giá, voucher và ưu đãi nạp ví là số liệu minh hoạ của bản concept. Giá thật xem tại website chính thức hoặc Fanpage Genesis.</p>
+      </div>
+    </section>
+
+    <!-- ============ CÁCH CHƠI ============ -->
+    <section class="sec howto" id="howto">
+      <div class="howto-pin">
+        <div class="wrap howto-head">
+          <p class="kicker rv">Hồ sơ số 04 — Hướng dẫn cách chơi</p>
+          <h2 class="title rv">Năm bước để <em>sống sót.</em></h2>
+        </div>
+        <div class="steps" id="steps"></div>
+      </div>
+    </section>
+
+    <!-- ============ CON SỐ ============ -->
+    <section class="band" id="stats"><div class="wrap band-grid" id="stat-grid"></div></section>
+
+    <!-- ============ REVIEW ============ -->
+    <section class="sec reviews" id="reviews">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="kicker rv">Hồ sơ số 05 — Lời khai nhân chứng</p>
+            <h2 class="title rv">Họ đã ra được. <em>Và kể lại.</em></h2>
+          </div>
+          <div class="rev-nav rv">
+            <button class="icon-btn" id="rev-prev" type="button" aria-label="Review trước">←</button>
+            <button class="icon-btn" id="rev-next" type="button" aria-label="Review sau">→</button>
+            <button class="btn btn-line btn-sm" id="rev-write" type="button">Viết review</button>
+          </div>
+        </div>
+        <div class="rev-track" id="rev-track"></div>
+      </div>
+    </section>
+
+    <!-- ============ NHÓM & DOANH NGHIỆP ============ -->
+    <section class="sec group" id="group">
+      <div class="wrap">
+        <p class="kicker rv">Hồ sơ số 06 — Ai nên đến Genesis</p>
+        <h2 class="title rv">Một vụ án, <em>nhiều kiểu đội.</em></h2>
+        <div class="seg-grid" id="seg-grid"></div>
+        <div class="group-grid">
+          <form class="card group-form rv" id="group-form" novalidate>
+            <h3>Team-building &amp; bao phòng</h3>
+            <p class="muted">Để lại thông tin, Genesis sẽ gọi lại tư vấn kịch bản phù hợp quy mô đội của bạn.</p>
+            <div class="f-row">
+              <label class="f"><span>Họ tên</span><input name="name" autocomplete="name" required /></label>
+              <label class="f"><span>Số điện thoại</span><input name="phone" inputmode="tel" autocomplete="tel" required /></label>
+            </div>
+            <div class="f-row">
+              <label class="f"><span>Đơn vị</span><input name="org" autocomplete="organization" /></label>
+              <label class="f"><span>Số người dự kiến</span><input name="size" type="number" min="4" max="500" placeholder="vd. 24" /></label>
+            </div>
+            <label class="f"><span>Mong muốn</span><textarea name="note" rows="2" placeholder="Ngày dự kiến, mục tiêu buổi chơi, mức độ kinh dị…"></textarea></label>
+            <button class="btn btn-red" type="submit">Gửi yêu cầu</button>
+            <p class="f-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="card pandora rv" id="pandora">
+            <svg viewBox="0 0 220 180" aria-hidden="true">
+              <ellipse cx="110" cy="96" rx="96" ry="70" fill="#e0242f" opacity=".14"/>
+              <path class="pan-lid" d="M40 82 110 54l70 28-70 28z" fill="#3a2418" stroke="#c9a227" stroke-width="2"/>
+              <path d="M40 92v44l70 30v-46z" fill="#24160f" stroke="#c9a227" stroke-width="2"/>
+              <path d="M180 92v44l-70 30v-46z" fill="#1b100b" stroke="#c9a227" stroke-width="2"/>
+              <circle cx="110" cy="128" r="7" fill="#c9a227"/><path d="M110 131v9" stroke="#1b100b" stroke-width="3"/>
+              <g class="pan-light" stroke="#ffb347" stroke-width="2" stroke-linecap="round"><path d="M110 60V26M88 64 72 36M132 64l16-28"/></g>
+            </svg>
+            <p class="kicker">Pandora’s Box</p>
+            <h3>Phá án tại nhà</h3>
+            <p class="muted">Một chiếc hộp hồ sơ gửi đến tận cửa: vật chứng, lời khai, mật thư. Tắt đèn, mở hộp, và cả nhà cùng làm thám tử.</p>
+            <a class="btn btn-line btn-sm" href="#contact">Hỏi về Pandora’s Box</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TUYỂN "MA MỚI" ============ -->
+    <section class="sec hiring" id="hiring">
+      <div class="wrap hiring-grid">
+        <div>
+          <p class="kicker rv">Hồ sơ số 07 — Chiêu mộ</p>
+          <h2 class="title rv">Genesis đang tuyển <em>“ma mới”.</em></h2>
+          <p class="lead rv">Game Master (a.k.a. Ma) là người tạo nên trải nghiệm điều tra, phá án cho mỗi đội chơi: nhập vai, vận hành phòng và đồng hành cùng khách.</p>
+          <ul class="ticks rv" id="hire-duties"></ul>
+          <div class="values rv" id="hire-values"></div>
+        </div>
+        <div class="hire-side">
+          <div class="card rv">
+            <h3>Ca làm việc</h3>
+            <ul class="shifts" id="hire-shifts"></ul>
+          </div>
+          <div class="card rv">
+            <h3>Quyền lợi</h3>
+            <ul class="perks" id="hire-perks"></ul>
+          </div>
+          <a class="card cv-card rv" href="/genesis-cv">
+            <span class="cv-ghost" aria-hidden="true">
+              <svg viewBox="0 0 60 70"><path d="M8 66V28a22 22 0 0 1 44 0v38l-7-6-7.5 6-7.5-6-7.5 6-7.5-6z" fill="#f1eee6"/><circle cx="23" cy="30" r="4" fill="#07080b"/><circle class="cv-eye" cx="38" cy="30" r="4" fill="#e0242f"/></svg>
+            </span>
+            <span><small>Một ứng viên đã nộp hồ sơ</small><b>Zabu xin làm “ma mới” →</b></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIÊN HỆ ============ -->
+    <section class="sec contact" id="contact">
+      <div class="wrap">
+        <p class="kicker rv">Hồ sơ số 08 — Liên hệ</p>
+        <h2 class="title rv">Ba cánh cửa. <em>Chọn một.</em></h2>
+        <div class="fac-grid" id="fac-grid"></div>
+        <form class="card contact-form rv" id="contact-form" novalidate>
+          <h3>Gửi lời nhắn cho Genesis</h3>
+          <div class="f-row">
+            <label class="f"><span>Họ tên</span><input name="name" autocomplete="name" required /></label>
+            <label class="f"><span>Email</span><input name="email" type="email" autocomplete="email" required /></label>
+          </div>
+          <label class="f"><span>Nội dung</span><textarea name="note" rows="3" required placeholder="Hỏi về phòng chơi, đặt lịch sự kiện, Pandora’s Box…"></textarea></label>
+          <button class="btn btn-red" type="submit">Gửi</button>
+          <p class="f-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="#hero"><b>GENESIS</b><span>ESCAPE</span></a>
+        <p class="muted">Giải mã kỳ án. Chuỗi trò chơi giải đố nhập vai kinh dị tại Hà Nội và TP. Hồ Chí Minh.</p>
+      </div>
+      <nav class="foot-links" aria-label="Liên kết cuối trang">
+        <a href="#rooms">Phòng chơi</a><a href="#schedule">Lịch trống</a><a href="#pricing">Bảng giá</a><a href="#howto">Cách chơi</a><a href="#hiring">Tuyển dụng</a><a href="#contact">Liên hệ</a>
+      </nav>
+      <div class="foot-note">
+        <p><b>Lưu ý:</b> đây là bản concept giao diện do Zabu tự thực hiện để gửi kèm hồ sơ ứng tuyển, <b>không phải website chính thức</b> và không do Genesis Escape vận hành. Tên phòng, địa chỉ, hotline lấy từ thông tin công khai; mô tả phòng, giá, lịch trống, voucher, review mẫu là minh hoạ. Tài khoản, ví và vé đặt chỉ lưu trên trình duyệt của bạn.</p>
+        <p><a href="https://genesis-escape.vn/" target="_blank" rel="noopener">Đặt phòng thật tại genesis-escape.vn ↗</a> · <a href="/genesis-cv">Hồ sơ của Zabu</a> · <button class="link" id="reset-demo" type="button">Xoá dữ liệu demo trên máy này</button></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="/genesis-cv/web/js/data.js" defer></script>
+  <script src="/genesis-cv/web/js/store.js" defer></script>
+  <script src="/genesis-cv/web/js/art.js" defer></script>
+  <script src="/genesis-cv/web/js/app.js" defer></script>
+  <script src="/genesis-cv/web/js/fx.js" defer></script>
+</body>
+</html>
